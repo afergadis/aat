@@ -1,0 +1,303 @@
+WARN main org.apache.jena.riot - Lexical form '1.94' not valid for datatype http://www.w3.org/2001/XMLSchema#long
+WARN main org.apache.jena.riot - Lexical form '2.12' not valid for datatype http://www.w3.org/2001/XMLSchema#long
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://www.aueb.gr/users/ion/mpiro.owl#exhibit1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/agora.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#NewUserType
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/agora.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#NewUserType
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/agora.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/agora.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/usr/local/eleon-1.2/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/usr/local/eleon-1.2/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/usr/local/eleon-1.2/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 123
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - ******** Problem on generating a text... ********
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - ******** DEBUGGING ********
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - ******** Problem on generating a text... ********
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - ******** DEBUGGING ********
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/workspace/Agora/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#Adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_SXtvwOrqEeO4hJj476K9ew" name="NewModel">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_e9HxEOrqEeO4hJj476K9ew" name="Παιδί"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_jY5Y0OrqEeO4hJj476K9ew" name="Ενήλικας"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_k5jTQOrqEeO4hJj476K9ew" name="UseCaseNewModel2"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_La4EAOrrEeO4hJj476K9ew" name="Association_Παιδί_to_UseCaseNewModel2" memberEnd="_LbGGcOrrEeO4hJj476K9ew _LbHUkOrrEeO4hJj476K9ew">
+    <ownedEnd xmi:id="_LbGGcOrrEeO4hJj476K9ew" type="_e9HxEOrqEeO4hJj476K9ew" association="_La4EAOrrEeO4hJj476K9ew"/>
+    <ownedEnd xmi:id="_LbHUkOrrEeO4hJj476K9ew" type="_k5jTQOrqEeO4hJj476K9ew" association="_La4EAOrrEeO4hJj476K9ew"/>
+  </packagedElement>
+</uml:Model>
