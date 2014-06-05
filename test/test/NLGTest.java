@@ -1,5 +1,6 @@
 package test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -8,22 +9,15 @@ import controller.NLG;
 
 public class NLGTest {
 
-    private final String owlPath = System.getProperty("user.dir")
-	    + "/data/OwlTemp.owl";
-    private final String NLResourcePath = System.getProperty("user.dir")
-	    + "/data";
     String userType = "Adult";
     String userID = "1";
-    NLG e = new NLG(userType, userID);
-
-    @Test
-    public void testNLG() {
-	fail("Not yet implemented");
-    }
+    NLG e = new NLG();
 
     @Test
     public void testGetText() {
-	fail("Not yet implemented");
+	String text[] = e.getText("Adult", "1", "altar-of-aphrodite-ourania",
+		false, 1);
+	assertFalse(text[1].equals(""));
     }
 
     @Test

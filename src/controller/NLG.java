@@ -8,24 +8,21 @@ public class NLG {
 	    + "/data/OwlTemp.owl";
     private final String NLResourcePath = System.getProperty("user.dir")
 	    + "/data";
-    private final String userType;
-    private final String userID;
     private String objectURI;
+    private String UT;
     private NLGEngine engine;
-    private String NLGSteps; // contains the produced text along with the
-			     // outputs of the intermediate stages of the NLG
-			     // engine
-    private String Text;
-    private String SLA; // semantic-linguistic annotations of the produced text
 
-    public NLG(String userType, String userID) {
-	this.userType = "http://www.aueb.gr/users/ion/owlnl/UserModelling#"
-		+ userType;
-	this.userID = userID;
-	NLGSteps = null;
-	Text = null;
-	SLA = null;
+    public NLG() {
+    }
 
+    /**
+     * 
+     * @return the produced text
+     */
+    public String[] getText(String userType, String userID, String id,
+	    boolean GenerateComparisons, int depth) {
+	objectURI = "http://localhost/OwlTemp.owl#" + id;
+	UT = "http://www.aueb.gr/users/ion/owlnl/UserModelling#" + userType;
 	try {
 	    engine = new NLGEngine(owlPath, NLResourcePath, Languages.ENGLISH, // Set
 									       // language
@@ -59,72 +56,38 @@ public class NLG {
 	    // boolean userExists =
 	    // engine.getUMVisit().checkUserExists(userID);
 
+	    // generate a new text ...
+	    String result[] = engine.GenerateDescription(0,
+	    // 0 means we are describing aninstance; 1 is for classes.
+		    objectURI, // The URI of the instance or class to
+			       // describe.
+		    UT, // String specifying the user type.
+		    userID, // String specifying the userID of the user.
+		    depth, // The depth in the RDF graph of the ontology we
+			   // are allowed to go in content selection when
+			   // describing instances. A depth of 1 will
+			   // produce
+			   // a text conveying only properties of the
+			   // instance
+			   // // being described. Larger depth values will
+			   // produce texts conveying also properties of
+			   // other related instances (e.g., �This lekythos
+			   // was created in the classical period. The
+			   // classical period was��).
+		    -1, // Maximum number of facts per sentence (how long
+			// an aggregated sentence can be); only used when
+			// userType is null.
+		    GenerateComparisons, // A Boolean specifying whether or
+		    // not
+		    // we want comparisons
+		    ""); // this is usefull only the communicates
+			 // with Pers. Server
+			 // if not use "" as default value
+
+	    return result;
 	} catch (Exception ex) {
 	    ex.printStackTrace();
 	}
-    }
-
-    /**
-     * 
-     * @return the produced text
-     */
-    public String getText(String id, boolean GenerateComparisons, int depth) {
-	objectURI = "http://localhost/OwlTemp.owl#" + id;
-	// generate a new text ...
-	String result[] = engine.GenerateDescription(0,
-	// 0 means we are describing aninstance; 1 is for classes.
-		objectURI, // The URI of the instance or class to
-			   // describe.
-		userType, // String specifying the user type.
-		userID, // String specifying the userID of the user.
-		depth, // The depth in the RDF graph of the ontology we
-		       // are allowed to go in content selection when
-		       // describing instances. A depth of 1 will
-		       // produce
-		       // a text conveying only properties of the
-		       // instance
-		       // // being described. Larger depth values will
-		       // produce texts conveying also properties of
-		       // other related instances (e.g., �This lekythos
-		       // was created in the classical period. The
-		       // classical period was��).
-		-1, // Maximum number of facts per sentence (how long
-		    // an aggregated sentence can be); only used when
-		    // userType is null.
-		GenerateComparisons, // A Boolean specifying whether or
-		// not
-		// we want comparisons
-		""); // this is usefull only the communicates
-		     // with Pers. Server
-		     // if not use "" as default value
-
-	NLGSteps = result[0];
-	Text = result[1];
-	SLA = result[2];
-
-	return Text;
-    }
-
-    /**
-     * 
-     * @return the produced text along with the outputs of the intermediate
-     *         stages of the NLG engine
-     */
-    public String getNLGSteps(String id, boolean GenerateComparisons, int depth) {
-	if (NLGSteps == null)
-	    getText(id, GenerateComparisons, depth);
-
-	return NLGSteps;
-    }
-
-    /**
-     * 
-     * @return semantic-linguistic annotations of the produced text
-     */
-    public String getSLA(String id, boolean GenerateComparisons, int depth) {
-	if (SLA == null)
-	    getText(id, GenerateComparisons, depth);
-
-	return SLA;
+	return null;
     }
 }

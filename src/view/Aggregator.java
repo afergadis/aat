@@ -15,7 +15,7 @@ import controller.NLG;
 import controller.QueryClass;
 import controller.QueryProfiles;
 
-public class UI {
+public class Aggregator {
     static QueryProfiles qp = new QueryProfilesOWL();
     static QueryClass qe = new QueryClassOWL("");
     static History h;
@@ -25,62 +25,60 @@ public class UI {
     public static void main(String[] args) {
 	String owlPath = System.getProperty("user.dir") + "/data/OwlTemp.owl";
 	String NLResourcePath = System.getProperty("user.dir") + "/data";
-	String up; // User Profile
+	String ut; // User Type (profile)
 	Scanner sc = new Scanner(System.in);
 	List<String> profiles = qp.getProfiles();
 
 	for (String p : profiles) {
 	    System.out.println(p);
 	}
-	System.out.println("Επιλογή προφίλ:");
+	System.out.println("Choose Profile:");
 	sc.nextLine(); // up = sc.nextLine();
-	up = "Adult";
+	ut = "Adult";
 
-	switch (up) {
+	switch (ut) {
 	case "Child":
-	    System.out.println("Εισαγωγικό κείμενο για το προφίλ «Παιδί».");
-	    System.out.println("Εκθέματα εκίνησης:");
-	    System.out.println("\tΈκθεμα 1");
-	    System.out.println("\tΈκθεμα 2");
+	    System.out.println("Intoduction text for profile \"Child\".");
+	    System.out.println("Start with:");
+	    System.out.println("\tExhibit 1");
+	    System.out.println("\tExhibit 2");
 	    break;
 	case "Adult":
-	    System.out.println("Εισαγωγικό κείμενο για το προφίλ «Ενήλικας».");
-	    System.out.println("Εκθέματα εκίνησης:");
-	    System.out.println("\tΈκθεμα 1");
-	    System.out.println("\tΈκθεμα 2");
+	    System.out.println("Intoduction text for profile \"Adult\".");
+	    System.out.println("Start with:");
+	    System.out.println("\tExhibit 1");
+	    System.out.println("\tExhibit 2");
 	    break;
 	case "Expert":
-	    System.out.println("Εισαγωγικό κείμενο για το προφίλ «Ειδικός».");
-	    System.out.println("Εκθέματα εκίνησης:");
-	    System.out.println("\tΈκθεμα 1");
-	    System.out.println("\tΈκθεμα 2");
+	    System.out.println("Intoduction text for profile \"Expert\".");
+	    System.out.println("Start with:");
+	    System.out.println("\tExhibit 1");
+	    System.out.println("\tExhibit 2");
 	    break;
 	default:
-	    System.out.println("Εισαγωγικό κείμενο.");
-	    System.out.println("Εκθέματα εκίνησης:");
-	    System.out.println("\tΈκθεμα 1");
-	    System.out.println("\tΈκθεμα 2");
+	    System.out.println("Intoduction text.");
+	    System.out.println("Start with:");
+	    System.out.println("\tExhibit 1");
+	    System.out.println("\tExhibit 2");
 	    break;
 	}
-	System.out.println("\tΈξοδος");
+	System.out.println("\tExit");
 	String choise = sc.nextLine();
 
 	// Δημιουργία του log file
 	String userID = Integer.toString((int) Math.random() * 1000000000);
-	h = new HistoryFile(userID, up);
+	h = new HistoryFile(userID, ut);
 
-	while (!choise.equals("Έξοδος")) {
-	    System.out.println("Παρακαλώ περιμένετε...");
+	while (!choise.toLowerCase().equals("exit")) {
+	    System.out.println("Please wait...");
 	    String exhibit = qe.getResults().get(0);
 	    String UT = "http://www.aueb.gr/users/ion/owlnl/UserModelling#"
-		    + up;
+		    + ut;
 	    String objectURI = "http://localhost/OwlTemp.owl#" + exhibit;
 
-	    // e = new NLG(up, userID);
 	    try {
 		NLGEngine myEngine = new NLGEngine(owlPath, NLResourcePath,
-			Languages.ENGLISH, // Set
-					   // language
+			Languages.ENGLISH, // Set language
 			true, // Use NaturalOWL's emulator of the Pers.
 			      // Server. A false value would signal that
 			      // the real Pers. server is to be used
@@ -116,7 +114,7 @@ public class UI {
 
 		// generate a new text ...
 		String result[] = myEngine.GenerateDescription(0,
-		// 0 means we are describing aninstance; 1 is for classes.
+		// 0 means we are describing an instance; 1 is for classes.
 			objectURI, // The URI of the instance or class to
 				   // describe.
 			UT, // String specifying the user type.
@@ -124,23 +122,19 @@ public class UI {
 			depth, // The depth in the RDF graph of the ontology we
 			       // are allowed to go in content selection when
 			       // describing instances. A depth of 1 will
-			       // produce
-			       // a text conveying only properties of the
-			       // instance
-			       // // being described. Larger depth values will
-			       // produce texts conveying also properties of
-			       // other related instances (e.g., �This lekythos
-			       // was created in the classical period. The
-			       // classical period was��).
+			       // produce a text conveying only properties of
+			       // the instance being described. Larger depth
+			       // values will produce texts conveying also
+			       // properties of other related instances (e.g.,
+			       // "This lekythos was created in the classical
+			       // period. The classical period was..".
 			-1, // Maximum number of facts per sentence (how long
 			    // an aggregated sentence can be); only used when
 			    // userType is null.
 			GenerateComparisons, // A Boolean specifying whether or
-			// not
-			// we want comparisons
-			""); // this is usefull only the communicates
-			     // with Pers. Server
-			     // if not use "" as default value
+			// not we want comparisons
+			""); // this is usefull only the communicates with Pers
+			     // Server if not use "" as default value
 
 		// System.out.println("---------------------------------------------------");
 		// the result array consists of 3 strings
@@ -160,19 +154,25 @@ public class UI {
 		// Δώσε τα στοιχεία στην κλάση AMObject η οποία θα εξάγει τα
 		// ενδιαφέροντα χαρακτηριστικά.
 		amo = new AMObject(exhibit, result[0]);
+
 		// Προσθήκη στο ιστορικό
 		// TODO να εισάγεται η τιμή για τον αν ήταν πρόταση του
 		// συστήματος ή επιλογή του χρήστη
-		String record = exhibit + ", 1";
-		h.addRecord(exhibit);
+		h.addRecord(exhibit + ", 1");
 		// Τα παρακάτω στοιχεία θα προκύπτουν απ' την κλάση amo
 		// TODO ανάγνωση από την κλάση amo
-		System.out.println("Ενδιαφέροντα εκθέματα:");
-		System.out.println("\tΈκθεμα 1"); // amo.getSugestions()
-		System.out.println("\tΈκθεμα 2");
-		System.out.println("\tΣύνδεσμοι"); // amo.getLinks()
-		System.out.println("\tΙστορικό");
-		System.out.println("\tΈξοδος");
+
+		System.out
+			.println("More links about \"" + amo.getName() + "\"");
+		for (String l : amo.getLinks()) {
+		    System.out.println("\t" + l);
+		}
+		System.out.println("Interesting exhibits for you:");
+		for (String e : amo.getSuggestions()) {
+		    System.out.println("\t" + e);
+		}
+		System.out.println("\n\tHistory");
+		System.out.println("\tExit");
 		choise = sc.nextLine();
 	    } catch (Exception ex) {
 		ex.printStackTrace();

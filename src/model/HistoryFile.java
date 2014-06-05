@@ -5,9 +5,9 @@ import java.util.List;
 import controller.History;
 
 /**
- * Καταγράφει το ιστορικό περιήγησης σε ένα αρχείο. Το όνομα του αρχείου έχει
- * το προφίλ του χρήστη και τον τυχαίο αριθμό του.
- * Κάθε γραμμή του αρχείου αντιστοιχεί σε μία "επίσκεψη".
+ * Καταγράφει το ιστορικό περιήγησης σε ένα αρχείο. Το όνομα του αρχείου έχει το
+ * προφίλ του χρήστη και τον τυχαίο αριθμό του. Κάθε γραμμή του αρχείου
+ * αντιστοιχεί σε μία "επίσκεψη".
  * 
  * @author team1
  * 
@@ -26,20 +26,20 @@ public class HistoryFile implements History {
      *            ένας αριθμός που αντιπροσωπεύει το χρήστη
      */
     public HistoryFile(String userType, String userID) {
-        this.filename = userType + "-" + userID + ".log";
-        // TODO Δημιουργία του αρχείου
+	this.filename = userType + "-" + userID + ".log";
+	// TODO Δημιουργία του αρχείου
     }
 
     @Override
     public List<String> getHistory() {
-        // TODO Auto-generated method stub
-        return null;
+	// TODO Auto-generated method stub
+	return null;
     }
 
     @Override
     public boolean addRecord(String data) {
-        // TODO Auto-generated method stub
-        return false;
+	// TODO Auto-generated method stub
+	return true;
     }
 
 }
