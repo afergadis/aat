@@ -62,6 +62,7 @@ public class Aggregator {
 	    System.out.println("\tExhibit 2");
 	    break;
 	}
+	System.out.println("\tOther");
 	System.out.println("\tExit");
 	String choise = sc.nextLine();
 
@@ -159,11 +160,8 @@ public class Aggregator {
 		// TODO να εισάγεται η τιμή για τον αν ήταν πρόταση του
 		// συστήματος ή επιλογή του χρήστη
 		h.addRecord(exhibit + ", 1");
-		// Τα παρακάτω στοιχεία θα προκύπτουν απ' την κλάση amo
-		// TODO ανάγνωση από την κλάση amo
 
-		System.out
-			.println("More links about \"" + amo.getName() + "\"");
+		System.out.println("More links about \"" + amo.getName() + "\"");
 		for (String l : amo.getLinks()) {
 		    System.out.println("\t" + l);
 		}
@@ -171,6 +169,7 @@ public class Aggregator {
 		for (String e : amo.getSuggestions()) {
 		    System.out.println("\t" + e);
 		}
+		System.out.println("\tOther");
 		System.out.println("\n\tHistory");
 		System.out.println("\tExit");
 		choise = sc.nextLine();
