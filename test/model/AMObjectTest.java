@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class AMObjectTest {
-    private final AMObject amo = new AMObject("altar-of-aphrodite-ourania", "");
+    private final AgoraObject amo = new AgoraObject("altar-of-aphrodite-ourania", "");
 
     @Test
     public void testGetLinks() {

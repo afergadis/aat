@@ -1,7 +1,7 @@
 package test;
 
 import static org.junit.Assert.assertEquals;
-import model.AMObject;
+import model.AgoraObject;
 
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ public class ExhibitTest {
     public void test() {
 	String id = "altar-of-aphrodite-ourania";
 	// Test constructor
-	AMObject e = new AMObject(id, "");
+	AgoraObject e = new AgoraObject(id, "");
 	assertEquals(e.getName(), id);
     }
 

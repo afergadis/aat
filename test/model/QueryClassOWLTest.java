@@ -14,10 +14,10 @@ public class QueryClassOWLTest {
     public void testGetResults() {
 	String results[] = { "altar-of-aphrodite-ourania" };
 	// Test number of query results
-	assertEquals(1, qc.getResults().size());
+	assertEquals(1, qc.getDescriptions().size());
 	// Test query results
-	for (int i = 0; i < qc.getResults().size(); i++) {
-	    assertEquals(results[i], qc.getResults().get(i));
+	for (int i = 0; i < qc.getDescriptions().size(); i++) {
+	    assertEquals(results[i], qc.getDescriptions().get(i));
 	}
     }
 

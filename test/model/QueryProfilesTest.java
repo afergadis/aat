@@ -12,7 +12,7 @@ public class QueryProfilesTest {
     @Test
     public void testGetProfiles() {
 	QueryProfiles qp = new QueryProfilesOWL();
-	String profiles[] = { "Child", "Adult", "Expert" };
+	String profiles[] = { "child", "adult", "expert" };
 	// Test number of query results
 	assertEquals(3, qp.getProfiles().size());
 	// Test query results
