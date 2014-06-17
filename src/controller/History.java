@@ -1,6 +1,6 @@
 package controller;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Το interface αυτό καθορίζει τις μεθόδους που πρέπει να υλοποιούν οι κλάσεις
@@ -19,13 +19,14 @@ public interface History {
      * 
      * @return λίστα με String. Κάθε String αντιστοιχεί σε μια εγγραφή.
      */
-    public abstract List<String> getHistory();
+    public abstract Set<String> getHistory();
 
     /**
-     * Εισάγει μία εγγραφή (comma separated) στη δομή.
+     * Εισάγει μία εγγραφή με τα ορίσματα στη δομή.
      * 
-     * @return true εάν η εγγραφή έγινε, false διαφορετικά.
      */
-    public abstract boolean addRecord(String data);
+    public abstract void addRecord(String data, int value);
+    
+    public abstract void commit();
 
 }

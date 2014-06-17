@@ -1,8 +1,10 @@
 package model;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -22,7 +24,6 @@ public class QueryClassOWL implements QueryClass {
 	String userProfile; // Καθορίζει το προφίλ του χρήστη για το οποίο θα
 						// διαβάσει την ξενάγηση
 	private List<AgoraObject> results;
-	private BufferedReader br;
 
 	/**
 	 * Αρχικοποιεί την κλάση με την προτεινόμενη διαδρομή για ένα συγκεκριμένο προφίλ
@@ -35,8 +36,7 @@ public class QueryClassOWL implements QueryClass {
 		this.userProfile = userProfile;
 		results = new ArrayList<>();
 		Path filename = Paths.get(System.getProperty("user.dir"), "data", userProfile + "_tour.csv");
-		try {
-			br = new BufferedReader(new FileReader(filename.toString()));
+		try (BufferedReader br = Files.newBufferedReader(filename, StandardCharsets.UTF_8)) {
 			String line = br.readLine(); // Αυτό είναι το header. Δε μας ενδιαφέρει.
 			
 			while ((line = br.readLine()) != null) {

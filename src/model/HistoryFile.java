@@ -1,6 +1,17 @@
 package model;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.nio.file.attribute.FileAttribute;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import controller.History;
 
@@ -14,32 +25,62 @@ import controller.History;
  */
 public class HistoryFile implements History {
 
-    private final String filename;
+	private Path file = null;
+	private List<LogRecord> records;
 
-    /**
-     * Δημιουργεί ένα αρχείο καταγραφής με όνομα το userType, το userID και
-     * κατάληξη log: userType + "-" + userID + ".log"
-     * 
-     * @param userType
-     *            το προφίλ του χρήστη
-     * @param userID
-     *            ένας αριθμός που αντιπροσωπεύει το χρήστη
-     */
-    public HistoryFile(String userType, String userID) {
-	this.filename = userType + "-" + userID + ".log";
-	// TODO Δημιουργία του αρχείου
-    }
+	/**
+	 * Δημιουργεί ένα αρχείο καταγραφής με όνομα το userType, το userID και
+	 * κατάληξη log: userType + "-" + userID + ".log"
+	 * 
+	 * @param userType
+	 *            το προφίλ του χρήστη
+	 * @param userID
+	 *            ένας αριθμός που αντιπροσωπεύει το χρήστη
+	 */
+	public HistoryFile(String userType, String userID) {
+		records = new ArrayList<>();
+		String filename = userType + "-" + userID + ".log";
+		file = Paths.get(System.getProperty("user.dir"), "log", filename);
+		
+	}
 
-    @Override
-    public List<String> getHistory() {
-	// TODO Auto-generated method stub
-	return null;
-    }
+	@Override
+	public Set<String> getHistory() {
+		Set<String> logRecords = new HashSet<>();
+		for (LogRecord r : records) {
+			logRecords.add(r.getValues().split(",")[0]);
+		}
 
-    @Override
-    public boolean addRecord(String data) {
-	// TODO Auto-generated method stub
-	return true;
-    }
+		return logRecords;
+	}
+
+	@Override
+	public void addRecord(String key, int value) {
+		LogRecord r = new LogRecord(key, value);
+		records.add(r);
+	}
+
+	@Override
+	public void commit() {
+		// Γράψε τις εγγραφές στο αρχείο
+		Path parentDir = file.getParent();
+		if (!Files.exists(parentDir)) {
+			try {
+				Files.createDirectories(parentDir);
+			} catch (IOException e) {
+				System.out.println("ERROR: Unable to create path " + parentDir);
+				System.exit(1);
+			}
+		}
+		try (BufferedWriter bw = Files.newBufferedWriter(file,
+				StandardCharsets.UTF_8, StandardOpenOption.CREATE)) {
+			for (LogRecord r : records) {
+				bw.write(r.getValues() + "\n");
+			}
+		} catch (IOException e) {
+			System.out.println("ERROR. Unable to create file: "
+					+ file.toString());
+		}
+	}
 
 }

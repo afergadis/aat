@@ -27,12 +27,16 @@ public class Aggregator {
 	static AgoraObject amo;
 	static NLG e;
 	static NLGEngine myEngine;
-	private final static String boldText = "\033[0;1m";
-	private final static String plainText = "\033[0;0m";
+	// http://stackoverflow.com/questions/5062458/font-settings-for-strings-in-java
+	private final static String BOLD = "\033[0;1m";
+	private final static String PLAIN = "\033[0;0m";
+	private final static String DIM = "\033[0;2m";
+	private final static String REVERSE = "\033[0;7m";
+	private final static String STRIKE = "\033[0;9m";
 
 	public static void main(String[] args) {
-		String owlPath = System.getProperty("user.dir") + "/data/OwlTemp.owl";
-		String NLResourcePath = System.getProperty("user.dir") + "/data";
+		String owlPath = "OwlTemp.owl";
+		String NLResourcePath = "data";
 		String ut; // User Type (profile)
 		qp = new QueryProfilesOWL();
 		List<String> profiles = qp.getProfiles();
@@ -45,8 +49,7 @@ public class Aggregator {
 		}
 		int choice = readChoice(sc, "Choose Profile Number", 0, profiles.size());
 		if (choice == -1) {
-			System.out.println("Bye");
-			System.exit(0);
+			exit("Bye", 0);
 		}
 
 		ut = profiles.get(choice);
@@ -57,8 +60,7 @@ public class Aggregator {
 				System.out.println(readFile("/data/child_intro.txt",
 						StandardCharsets.UTF_8));
 			} catch (IOException e1) {
-				System.out.println("Could not read file /data/child_intro.txt");
-				System.exit(1);
+				exit("Could not read file /data/child_intro.txt", 1);
 			}
 			// Διάβασε την ξενάγηση
 			qe = new QueryClassOWL("child");
@@ -70,16 +72,14 @@ public class Aggregator {
 				System.out.println(readFile("/data/adult_intro.txt",
 						StandardCharsets.UTF_8));
 			} catch (IOException e1) {
-				System.out.println("Could not read file /data/adult_intro.txt");
-				System.exit(1);
+				exit("Could not read file /data/adult_intro.txt", 1);
 			}
 			// Διάβασε την ξενάγηση
 			qe = new QueryClassOWL("adult");
 			choice = readExhibit(sc, "\t", qe.getObjects(), qe.getStart()
 					.getDescr(), null);
 			if (choice == -1) {
-				System.out.println("Bye");
-				System.exit(0);
+				exit("Bye", 0);
 			}
 			break;
 		case "expert":
@@ -87,9 +87,7 @@ public class Aggregator {
 				System.out.println(readFile("/data/expert_intro.txt",
 						StandardCharsets.UTF_8));
 			} catch (IOException e1) {
-				System.out
-						.println("Could not read file /data/expert_intro.txt");
-				System.exit(1);
+				exit("Could not read file /data/expert_intro.txt", 1);
 			}
 			// Διάβασε την ξενάγηση
 			qe = new QueryClassOWL("expert");
@@ -100,17 +98,24 @@ public class Aggregator {
 
 			break;
 		default:
-			System.out.println("An unkown profile selected!");
-			System.exit(1);
+			exit("An unknown profile selected!", 1);
 			break;
 		}
 
 		// Δημιουργία του log file
 		String userID = Integer.toString((int) Math.random() * 1000);
-		h = new HistoryFile(userID, ut);
+		h = new HistoryFile(ut, userID);
+		
+		// Σε περίπτωση κλεισίματος με Ctrl+C γράψε τα δεδομένα του ιστορικού στο αρχείο
+		Thread shutDown = new Thread() {
+            @Override
+            public void run() {
+                h.commit();
+            }
+        };
+        Runtime.getRuntime().addShutdownHook(shutDown);
 
 		System.out.println("Please wait...");
-		AgoraObject exhibit = qe.getExhibit(choice);
 		String UT = "http://www.aueb.gr/users/ion/owlnl/UserModelling#"
 				+ ut.toLowerCase();
 
@@ -147,89 +152,63 @@ public class Aggregator {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+
+		// Καταχώρηση της 1ης επιλογής στο log
+		AgoraObject exhibit = qe.getExhibit(choice);
+		if (exhibit == qe.getStart()) {
+			h.addRecord(exhibit.getName(), 1);
+		} else {
+			h.addRecord(exhibit.getName(), 0);
+		}
+		// Loop ξενάγησης
 		while (choice != -1) {
-			String objectURI = "http://localhost/OwlTemp.owl#" + exhibit.getName();
+			String objectURI = "http://localhost/OwlTemp.owl#"
+					+ exhibit.getName();
 			boolean GenerateComparisons = false;
 			int depth = 2;
 
 			// generate a new text ...
-			String result[] = myEngine.GenerateDescription(0,
-			// 0 means we are describing an instance; 1 is for classes.
-					objectURI, // The URI of the instance or class to
-					// describe.
-					UT, // String specifying the user type.
-					userID, // String specifying the userID of the user.
-					depth, // The depth in the RDF graph of the ontology we
-							// are allowed to go in content selection when
-							// describing instances. A depth of 1 will
-							// produce a text conveying only properties of
-							// the instance being described. Larger depth
-							// values will produce texts conveying also
-							// properties of other related instances (e.g.,
-							// "This lekythos was created in the classical
-							// period. The classical period was..".
-					-1, // Maximum number of facts per sentence (how long
-						// an aggregated sentence can be); only used when
-						// userType is null.
-					GenerateComparisons, // A Boolean specifying whether or
-					// not we want comparisons
-					""); // this is usefull only the communicates with Pers
-							// Server if not use "" as default value
+			String result[] = myEngine.GenerateDescription(0, objectURI, UT,
+					userID, depth, -1, GenerateComparisons, "");
 
-			// System.out.println("---------------------------------------------------");
-			// the result array consists of 3 strings
-			// the first string contains the produced text along with
-			// the outputs of the intermediate stages of the NLG engine
-			// System.out.println(result[0]);
-
-			// System.out.println("---------------------------------------------------");
-			// the second string contains only the produced text
-			System.out.println(result[1] + "\n");
-
-			// System.out.println("---------------------------------------------------");
-			// also the engine produces semantic-linguistic annotations
-			// of the produced text ...
-			// System.out.println(result[2]);
+			System.out.println(result[1]);
 
 			switch (ut.toLowerCase()) {
 			case "child":
-
-				qe = new QueryClassOWL("child");
-				System.out.println("Start with:");
-				System.out.println(qe.getStart().getDescr());
 				break;
 			case "adult":
 				choice = readExhibit(sc, "\t", qe.getObjects(),
 						exhibit.getSuggestions());
 				if (choice == -1) {
-					System.out.println("Bye");
-					System.exit(0);
+					exit("Bye", 0);
 				}
 				break;
 			case "expert":
-				try {
-					System.out.println(readFile("/data/expert_intro.txt",
-							StandardCharsets.UTF_8));
-				} catch (IOException e1) {
-					System.out
-							.println("Could not read file /data/expert_intro.txt");
-					System.exit(1);
-				}
-				// Διάβασε την ξενάγηση
-				qe = new QueryClassOWL("expert");
-				int i = 0;
-				for (String s : qe.getDescriptions()) {
-					System.out.printf("%2d: %s", i + 1, s);
-				}
-
 				break;
 			default:
-				System.out.println("An unkown profile selected!");
-				System.exit(1);
-				break;
+				exit("An unknown profile selected!", 1);
 			}
-			// TODO Καταχώρηση εκθέματος στο History
+			// Καταχώρησε τις προτάσεις του προηγούμενου εκθέματος
+			List<String> suggestions = exhibit.getSuggestions();
+			
+			// Βρες το νέο έκθεμα που διάλεξε ο χρήστης
 			exhibit = qe.getExhibit(choice);
+			
+			// Καταχώρηση της επιλογής στο log file
+			boolean suggested = false;
+			for (String s: suggestions) {
+				// Αν το όνομα του επιλεγμένου ήταν στις προτάσεις
+				if (exhibit.getName().equals(s)) {
+					h.addRecord(exhibit.getName(), 1);
+					suggested = true;
+					break;
+				}
+			}
+			if (!suggested) {
+				h.addRecord(exhibit.getName(), 0);
+			}
+				
+			
 		}
 		sc.close();
 		System.out.println("Bye");
@@ -266,9 +245,11 @@ public class Aggregator {
 		int i = 1;
 		for (AgoraObject o : exhibits) {
 			if (o.getDescr().equals(s1) || o.getDescr().equals(s2))
-				System.out.printf("%s%2d: *%s*\n",  prompt, i, o.getDescr());
+				System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+						o.getDescr());
 			else
-				System.out.printf("%s%2d: %s\n", prompt, i, o.getDescr());
+				System.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
+						o.getDescr());
 			i++;
 		}
 
@@ -282,20 +263,30 @@ public class Aggregator {
 		int i = 1;
 		boolean suggested = false; // Αν έχει εκτυπωθεί ως πρόταση
 		for (AgoraObject o : exhibits) {
-			for (String s : suggestions) { // Δες αν το ο είναι στη λίστα suggestions
+			for (String s : suggestions) { // Δες αν το ο είναι στη λίστα
+											// suggestions
 				if (o.getDescr().equals(s)) {
-					System.out.printf("%s%2d: *%s*\n", prompt, i, o.getDescr());
+					System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+							o.getDescr());
 					suggested = true; // Είναι, το τυπώσαμε
 					break;
 				}
 			}
 			if (!suggested) // Αν δεν έχει τυπωθεί, τύπωσέ το
-				System.out.printf("%s%2d: %s\n", prompt, i, o.getDescr());
+				System.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
+						o.getDescr());
 			i++;
 			suggested = false; // reset
 		}
 
 		return readChoice(sc,
 				"Choose an Exhibit Number (suggestions with stars)", 0, i - 1);
+	}
+	
+	private static void exit(String msg, int value) {
+		// Αποθήκευση του ιστορικού
+		h.commit();
+		System.out.println(msg);
+		System.exit(value);
 	}
 }
