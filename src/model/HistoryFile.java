@@ -7,8 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.nio.file.attribute.FileAttribute;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -41,7 +42,7 @@ public class HistoryFile implements History {
 		records = new ArrayList<>();
 		String filename = userType + "-" + userID + ".log";
 		file = Paths.get(System.getProperty("user.dir"), "log", filename);
-		
+
 	}
 
 	@Override
@@ -56,30 +57,38 @@ public class HistoryFile implements History {
 
 	@Override
 	public void addRecord(String key, int value) {
-		LogRecord r = new LogRecord(key, value);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date resultDate = new Date(System.currentTimeMillis());
+
+		LogRecord r = new LogRecord(key, value, sdf.format(resultDate));
 		records.add(r);
 	}
 
 	@Override
 	public void commit() {
-		// Γράψε τις εγγραφές στο αρχείο
-		Path parentDir = file.getParent();
-		if (!Files.exists(parentDir)) {
-			try {
-				Files.createDirectories(parentDir);
+		if (records.size() > 0) {
+			// Φτιάξε μια εγγραφή για την ώρα εξόδου
+			addRecord("", 0);
+			// Γράψε τις εγγραφές στο αρχείο
+			Path parentDir = file.getParent();
+			if (!Files.exists(parentDir)) {
+				try {
+					Files.createDirectories(parentDir);
+				} catch (IOException e) {
+					System.out.println("ERROR: Unable to create path "
+							+ parentDir);
+					System.exit(1);
+				}
+			}
+			try (BufferedWriter bw = Files.newBufferedWriter(file,
+					StandardCharsets.UTF_8, StandardOpenOption.CREATE)) {
+				for (LogRecord r : records) {
+					bw.write(r.getValues() + "\n");
+				}
 			} catch (IOException e) {
-				System.out.println("ERROR: Unable to create path " + parentDir);
-				System.exit(1);
+				System.out.println("ERROR. Unable to create file: "
+						+ file.toString());
 			}
-		}
-		try (BufferedWriter bw = Files.newBufferedWriter(file,
-				StandardCharsets.UTF_8, StandardOpenOption.CREATE)) {
-			for (LogRecord r : records) {
-				bw.write(r.getValues() + "\n");
-			}
-		} catch (IOException e) {
-			System.out.println("ERROR. Unable to create file: "
-					+ file.toString());
 		}
 	}
 
