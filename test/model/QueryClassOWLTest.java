@@ -4,11 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import controller.QueryClass;
+import controller.UserTour;
 
 public class QueryClassOWLTest {
 
-    private final QueryClass qc = new QueryClassOWL("Altar");
+    private final UserTour qc = new UserTourFile("Altar");
 
     @Test
     public void testGetResults() {

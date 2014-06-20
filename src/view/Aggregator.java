@@ -4,29 +4,34 @@ import gr.aueb.cs.nlg.Languages.Languages;
 import gr.aueb.cs.nlg.NLGEngine.NLGEngine;
 
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
-import model.AgoraObject;
 import model.HistoryFile;
-import model.QueryClassOWL;
 import model.QueryProfilesOWL;
+import model.TourStep;
+import model.UserTourFile;
+
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 import controller.History;
-import controller.NLG;
-import controller.QueryClass;
 import controller.QueryProfiles;
+import controller.UserTour;
 
 public class Aggregator {
 	static QueryProfiles qp;
-	static QueryClass qe = null;
+	static UserTour ut = null;
 	static History h;
-	static AgoraObject amo;
-	static NLG e;
-	static NLGEngine myEngine;
+	static TourStep ts;
+	static NLGEngine e;
 	// http://stackoverflow.com/questions/5062458/font-settings-for-strings-in-java
 	private final static String BOLD = "\033[0;1m";
 	private final static String PLAIN = "\033[0;0m";
@@ -35,13 +40,24 @@ public class Aggregator {
 	private final static String STRIKE = "\033[0;9m";
 
 	public static void main(String[] args) {
+		Logger.getRootLogger().setLevel(Level.OFF);
+		
 		String owlPath = "OwlTemp.owl";
 		String NLResourcePath = "data";
-		String ut; // User Type (profile)
+		String up; // User Profile
 		qp = new QueryProfilesOWL();
 		List<String> profiles = qp.getProfiles();
 		Scanner sc = new Scanner(System.in);
 
+		// Εμφάνιση της εισαγωγής
+		try {
+			System.out.println(readFile("/data/intro.txt",
+					StandardCharsets.UTF_8));
+		} catch (IOException e2) {
+			exit("File \"./data/intro.txt\" not found.", 1);
+		}
+
+		// Εμφάνιση των διαθέσιμων προφίλ
 		for (int i = 0; i < profiles.size(); i++) {
 			// i+1 για να μην εμφανίζουμε το μηδέν
 			String profile = (i + 1) + ": " + profiles.get(i);
@@ -52,151 +68,121 @@ public class Aggregator {
 			exit("Bye", 0);
 		}
 
-		ut = profiles.get(choice);
+		up = profiles.get(choice).toLowerCase();
+		String filename = "/data/" + up + "_intro.txt";
 
-		switch (ut.toLowerCase()) {
-		case "child":
+		switch (up) {
+		case "basic":
+			// Εμφάνιση του εισαγωγικού κειμένου για το προφίλ
 			try {
-				System.out.println(readFile("/data/child_intro.txt",
-						StandardCharsets.UTF_8));
+				System.out.println(readFile(filename, StandardCharsets.UTF_8));
 			} catch (IOException e1) {
-				exit("Could not read file /data/child_intro.txt", 1);
+				exit("Could not read file " + filename, 1);
 			}
 			// Διάβασε την ξενάγηση
-			qe = new QueryClassOWL("child");
-			System.out.println("Start with:");
-			System.out.println(qe.getStart().getDescr());
-			break;
-		case "adult":
-			try {
-				System.out.println(readFile("/data/adult_intro.txt",
-						StandardCharsets.UTF_8));
-			} catch (IOException e1) {
-				exit("Could not read file /data/adult_intro.txt", 1);
-			}
-			// Διάβασε την ξενάγηση
-			qe = new QueryClassOWL("adult");
-			choice = readExhibit(sc, "\t", qe.getObjects(), qe.getStart()
+			ut = new UserTourFile(up);
+			System.out.println("Start by viewing (suggestions in bold):");
+			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
 					.getDescr(), null);
 			if (choice == -1) {
 				exit("Bye", 0);
 			}
 			break;
-		case "expert":
+		case "advanced":
 			try {
-				System.out.println(readFile("/data/expert_intro.txt",
-						StandardCharsets.UTF_8));
+				System.out.println(readFile(filename, StandardCharsets.UTF_8));
 			} catch (IOException e1) {
-				exit("Could not read file /data/expert_intro.txt", 1);
+				exit("Could not read file " + filename, 1);
 			}
-			// Διάβασε την ξενάγηση
-			qe = new QueryClassOWL("expert");
-			int i = 0;
-			for (String s : qe.getDescriptions()) {
-				System.out.printf("%2d: %s", i + 1, s);
+			ut = new UserTourFile(up);
+			System.out.println("Start by viewing (suggestion in bold):");
+			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
+					.getDescr(), null);
+			if (choice == -1) {
+				exit("Bye", 0);
 			}
-
 			break;
 		default:
-			exit("An unknown profile selected!", 1);
-			break;
+			System.out.println("An unknown profile selected!");
+			System.exit(1);
 		}
 
 		// Δημιουργία του log file
-		String userID = Integer.toString((int) Math.random() * 1000);
-		h = new HistoryFile(ut, userID);
-		
-		// Σε περίπτωση κλεισίματος με Ctrl+C γράψε τα δεδομένα του ιστορικού στο αρχείο
-		Thread shutDown = new Thread() {
-            @Override
-            public void run() {
-                h.commit();
-            }
-        };
-        Runtime.getRuntime().addShutdownHook(shutDown);
+		BigInteger rnd = new BigInteger(30, new Random(
+				System.currentTimeMillis()));
+		String userID = rnd.toString();
+		h = new HistoryFile(up, userID);
 
+		// Σε περίπτωση κλεισίματος με Ctrl+C γράψε τα δεδομένα του ιστορικού
+		// στο αρχείο
+		Thread shutDown = new Thread() {
+			@Override
+			public void run() {
+				h.commit();
+			}
+		};
+		Runtime.getRuntime().addShutdownHook(shutDown);
+
+		// Εκκίνηση του NLGEngine
 		System.out.println("Please wait...");
 		String UT = "http://www.aueb.gr/users/ion/owlnl/UserModelling#"
-				+ ut.toLowerCase();
+				+ up.toLowerCase();
 
 		try {
-			myEngine = new NLGEngine(owlPath, NLResourcePath,
-					Languages.ENGLISH, // Set language
-					true, // Use NaturalOWL's emulator of the Pers.
-							// Server. A false value would signal that
-							// the real Pers. server is to be used
-					false, // load the databases of PServer
-					null, // Objects representing the lexicon, user
-							// modelling, microplans, and
-					null, // ontology. If already available, they
-					null, // may be passed to the engine;
-					null, // otherwise null values are passed.
-					"", // navigation server IP
-					-1, // navigation server port (-1
-						// means to use the default port
-						// 53000)
-					"", // PServer's database username
-					"", // PServer's database password
-					"", // PServer's IP
-					-1); // PServer's port
+			e = new NLGEngine(owlPath, NLResourcePath, Languages.ENGLISH, true,
+					false, null, null, null, null, "", -1, "", "", "", -1);
 
 			// initialize PServer
-			myEngine.initPServer();
+			e.initPServer();
 
 			// initialize the statistical tree used
 			// in the generation of comparisons
-			myEngine.initStatisticalTree();
+			e.initStatisticalTree();
 
 			// create a new user in PServer
-			myEngine.getUMVisit().newUser(userID, UT);
+			e.getUMVisit().newUser(userID, UT);
 		} catch (Exception ex) {
+			System.out.println("Could not start NLGEngine.");
 			ex.printStackTrace();
 		}
 
 		// Καταχώρηση της 1ης επιλογής στο log
-		AgoraObject exhibit = qe.getExhibit(choice);
-		if (exhibit == qe.getStart()) {
+		TourStep exhibit = ut.getExhibit(choice);
+		if (exhibit == ut.getStart()) {
 			h.addRecord(exhibit.getName(), 1);
 		} else {
 			h.addRecord(exhibit.getName(), 0);
 		}
+
 		// Loop ξενάγησης
 		while (choice != -1) {
 			String objectURI = "http://localhost/OwlTemp.owl#"
 					+ exhibit.getName();
 			boolean GenerateComparisons = false;
-			int depth = 2;
+			int depth = 1;
 
-			// generate a new text ...
-			String result[] = myEngine.GenerateDescription(0, objectURI, UT,
-					userID, depth, -1, GenerateComparisons, "");
+			// Εμφάνιση κειμένου
+			System.out.println(exhibit.getDescr() + "\n");
+			String result[] = e.GenerateDescription(0, objectURI, UT, userID,
+					depth, -1, GenerateComparisons, "");
+			System.out.println(result[1] + "\n");
 
-			System.out.println(result[1]);
-
-			switch (ut.toLowerCase()) {
-			case "child":
-				break;
-			case "adult":
-				choice = readExhibit(sc, "\t", qe.getObjects(),
-						exhibit.getSuggestions());
-				if (choice == -1) {
-					exit("Bye", 0);
-				}
-				break;
-			case "expert":
-				break;
-			default:
-				exit("An unknown profile selected!", 1);
+			// Εμφάνιση των επιλογών και ανάγνωση της επιλογής του χρήστη
+			choice = readExhibit(sc, "\t", ut.getObjects(),
+					exhibit.getSuggestions(), h.getHistory());
+			if (choice == -1) {
+				exit("Bye", 0);
 			}
+
 			// Καταχώρησε τις προτάσεις του προηγούμενου εκθέματος
 			List<String> suggestions = exhibit.getSuggestions();
-			
+
 			// Βρες το νέο έκθεμα που διάλεξε ο χρήστης
-			exhibit = qe.getExhibit(choice);
-			
+			exhibit = ut.getExhibit(choice);
+
 			// Καταχώρηση της επιλογής στο log file
 			boolean suggested = false;
-			for (String s: suggestions) {
+			for (String s : suggestions) {
 				// Αν το όνομα του επιλεγμένου ήταν στις προτάσεις
 				if (exhibit.getName().equals(s)) {
 					h.addRecord(exhibit.getName(), 1);
@@ -207,8 +193,7 @@ public class Aggregator {
 			if (!suggested) {
 				h.addRecord(exhibit.getName(), 0);
 			}
-				
-			
+
 		}
 		sc.close();
 		System.out.println("Bye");
@@ -241,9 +226,9 @@ public class Aggregator {
 	}
 
 	private static int readExhibit(Scanner sc, String prompt,
-			List<AgoraObject> exhibits, String s1, String s2) {
+			List<TourStep> exhibits, String s1, String s2) {
 		int i = 1;
-		for (AgoraObject o : exhibits) {
+		for (TourStep o : exhibits) {
 			if (o.getDescr().equals(s1) || o.getDescr().equals(s2))
 				System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
 						o.getDescr());
@@ -257,19 +242,30 @@ public class Aggregator {
 				"Choose an Exhibit Number (suggestions with stars)", 0, i - 1);
 	}
 
-	// TODO: Χρειάζεται και το history για να μην εμφανίζει όσα επισκέφτηκε
 	private static int readExhibit(Scanner sc, String prompt,
-			List<AgoraObject> exhibits, List<String> suggestions) {
+			List<TourStep> exhibits, List<String> suggestions,
+			Set<String> history) {
 		int i = 1;
 		boolean suggested = false; // Αν έχει εκτυπωθεί ως πρόταση
-		for (AgoraObject o : exhibits) {
-			for (String s : suggestions) { // Δες αν το ο είναι στη λίστα
-											// suggestions
-				if (o.getDescr().equals(s)) {
-					System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+		for (TourStep o : exhibits) {
+			for (String s : history) {
+				// Δες αν το αντικείμενο είναι στη λίστα ιστορικού
+				if (o.getName().equals(s)) {
+					System.out.printf("%s%s%2d: %s\n", STRIKE, prompt, i,
 							o.getDescr());
 					suggested = true; // Είναι, το τυπώσαμε
 					break;
+				}
+			}
+			if (!suggested) {
+				for (String s : suggestions) {
+					// Δες αν το αντικείμενο είναι στη λίστα suggestions
+					if (o.getName().equals(s)) {
+						System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+								o.getDescr());
+						suggested = true; // Είναι, το τυπώσαμε
+						break;
+					}
 				}
 			}
 			if (!suggested) // Αν δεν έχει τυπωθεί, τύπωσέ το
@@ -282,10 +278,12 @@ public class Aggregator {
 		return readChoice(sc,
 				"Choose an Exhibit Number (suggestions with stars)", 0, i - 1);
 	}
-	
+
 	private static void exit(String msg, int value) {
 		// Αποθήκευση του ιστορικού
-		h.commit();
+		if (h != null) {
+			h.commit();
+		}
 		System.out.println(msg);
 		System.exit(value);
 	}

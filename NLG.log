@@ -1021,3 +1021,227 @@ INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
 INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
 INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
 INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit5
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit4
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit3
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit6
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit5
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit3
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit3
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit6
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit4
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit5
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#altar-of-aphrodite-ourania
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 785944425
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 785944425
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#Exhibit4
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#adult
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 785944425
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 2
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+WARN main org.apache.jena.riot - [line: 539, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 540, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 580, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 594, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 595, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 623, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 624, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 660, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 661, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 686, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 687, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 695, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 696, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 711, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 712, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 717, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 718, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 723, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 724, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 725, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 889, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 890, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 988, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 989, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1028, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1029, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1047, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1048, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1058, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1071, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1072, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#middle-stoa
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#basic
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 299728717
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
+WARN main org.apache.jena.riot - [line: 539, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 540, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 580, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 594, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 595, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 623, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 624, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 660, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 661, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 686, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 687, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 695, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 696, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 711, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 712, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 717, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 718, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 723, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 724, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 725, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 889, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 890, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 988, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 989, col: 36] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1028, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1029, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1047, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1048, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1058, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1071, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+WARN main org.apache.jena.riot - [line: 1072, col: 40] {W116} No primary language subtags of length greater than 3 are currently defined.
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/Lexicon.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/microplans.rdf
+INFO main gr.aueb.cs.nlg.NLFiles.NLFileManager - Loading:file:/home/aris/programming/java/AMT/data/UserModelling.rdf
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - type:0
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - objectURI: http://localhost/OwlTemp.owl#stoa-of-zeus-eleutherios
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userType: http://www.aueb.gr/users/ion/owlnl/UserModelling#basic
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - userID: 745433036
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - depth: 1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - MFPS: -1
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - withComp: false
+INFO main gr.aueb.cs.nlg.NLGEngine.NLGEngine - personality: 
