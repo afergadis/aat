@@ -1,0 +1,9 @@
+Agora Intro Text
+
+Choosing Profile:
+
+Choose Advanced if you have a theoretical background in history
+and previous knowledge of the archaeological terminology.
+
+Choose Basic if you want basic information or you don't have
+previous knowledge of the archaeological terminology.
