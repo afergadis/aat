@@ -35,13 +35,11 @@ public class Aggregator {
 	// http://stackoverflow.com/questions/5062458/font-settings-for-strings-in-java
 	private final static String BOLD = "\033[0;1m";
 	private final static String PLAIN = "\033[0;0m";
-	private final static String DIM = "\033[0;2m";
-	private final static String REVERSE = "\033[0;7m";
 	private final static String STRIKE = "\033[0;9m";
 
 	public static void main(String[] args) {
 		Logger.getRootLogger().setLevel(Level.OFF);
-		
+
 		String owlPath = "OwlTemp.owl";
 		String NLResourcePath = "data";
 		String up; // User Profile
@@ -70,6 +68,9 @@ public class Aggregator {
 
 		up = profiles.get(choice).toLowerCase();
 		String filename = "/data/" + up + "_intro.txt";
+		String legend = "Our suggestions are in " + BOLD + "bold" + PLAIN
+				+ " and viewed items are " + STRIKE + "striked out" + PLAIN
+				+ ".\n";
 
 		switch (up) {
 		case "basic":
@@ -79,9 +80,10 @@ public class Aggregator {
 			} catch (IOException e1) {
 				exit("Could not read file " + filename, 1);
 			}
+			System.out.println(legend);
 			// Διάβασε την ξενάγηση
 			ut = new UserTourFile(up);
-			System.out.println("Start by viewing (suggestions in bold):");
+			System.out.println("Start by viewing:");
 			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
 					.getDescr(), null);
 			if (choice == -1) {
@@ -94,6 +96,7 @@ public class Aggregator {
 			} catch (IOException e1) {
 				exit("Could not read file " + filename, 1);
 			}
+			System.out.println(legend);
 			ut = new UserTourFile(up);
 			System.out.println("Start by viewing (suggestion in bold):");
 			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
@@ -128,23 +131,7 @@ public class Aggregator {
 		String UT = "http://www.aueb.gr/users/ion/owlnl/UserModelling#"
 				+ up.toLowerCase();
 
-		try {
-			e = new NLGEngine(owlPath, NLResourcePath, Languages.ENGLISH, true,
-					false, null, null, null, null, "", -1, "", "", "", -1);
-
-			// initialize PServer
-			e.initPServer();
-
-			// initialize the statistical tree used
-			// in the generation of comparisons
-			e.initStatisticalTree();
-
-			// create a new user in PServer
-			e.getUMVisit().newUser(userID, UT);
-		} catch (Exception ex) {
-			System.out.println("Could not start NLGEngine.");
-			ex.printStackTrace();
-		}
+		startNLG(owlPath, NLResourcePath, userID, UT);
 
 		// Καταχώρηση της 1ης επιλογής στο log
 		TourStep exhibit = ut.getExhibit(choice);
@@ -197,6 +184,27 @@ public class Aggregator {
 		}
 		sc.close();
 		System.out.println("Bye");
+	}
+
+	private static void startNLG(String owlPath, String NLResourcePath,
+			String userID, String UT) {
+		try {
+			e = new NLGEngine(owlPath, NLResourcePath, Languages.ENGLISH, true,
+					false, null, null, null, null, "", -1, "", "", "", -1);
+
+			// initialize PServer
+			e.initPServer();
+
+			// initialize the statistical tree used
+			// in the generation of comparisons
+			e.initStatisticalTree();
+
+			// create a new user in PServer
+			e.getUMVisit().newUser(userID, UT);
+		} catch (Exception ex) {
+			System.out.println("Could not start NLGEngine.");
+			ex.printStackTrace();
+		}
 	}
 
 	// Διαβάζει ένα αρχείο και το επιστρέφει ως String
