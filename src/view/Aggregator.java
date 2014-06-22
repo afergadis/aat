@@ -116,15 +116,8 @@ public class Aggregator {
 		String userID = rnd.toString();
 		h = new HistoryFile(up, userID);
 
-		// Σε περίπτωση κλεισίματος με Ctrl+C γράψε τα δεδομένα του ιστορικού
-		// στο αρχείο
-		Thread shutDown = new Thread() {
-			@Override
-			public void run() {
-				h.commit();
-			}
-		};
-		Runtime.getRuntime().addShutdownHook(shutDown);
+		// Ctrl+C
+		Runtime.getRuntime().addShutdownHook(new ShutDown());
 
 		// Εκκίνηση του NLGEngine
 		System.out.println("Please wait...");
@@ -247,7 +240,7 @@ public class Aggregator {
 		}
 
 		return readChoice(sc,
-				"Choose an Exhibit Number (suggestions with stars)", 0, i - 1);
+				"Choose a Number (suggestions in bold)", 0, i - 1);
 	}
 
 	private static int readExhibit(Scanner sc, String prompt,
@@ -294,5 +287,13 @@ public class Aggregator {
 		}
 		System.out.println(msg);
 		System.exit(value);
+	}
+	
+	static class ShutDown extends Thread {
+		@Override
+		public void run() {
+			h.commit();
+			System.out.println("Bye");
+		}
 	}
 }
