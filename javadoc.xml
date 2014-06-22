@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam="-encoding UTF-8 -charset UTF-8 -docencoding UTF-8  " author="true" classpath="lib/commons-codec-1.6.jar:lib/httpcore-4.2.2.jar:lib/jena-arq-2.11.1.jar:lib/httpclient-4.2.3.jar:lib/log4j-1.2.16.jar:/usr/local/eclipse/plugins/org.junit_4.11.0.v201303080030/junit.jar:lib/NL.jar:lib/jena-iri-1.0.1.jar:lib/slf4j-log4j12-1.6.4.jar:lib/jena-tdb-1.0.1.jar:/usr/local/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar:lib/jena-sdb-1.4.1.jar:lib/slf4j-api-1.6.4.jar:lib/xercesImpl-2.11.0.jar:lib/jena-core-2.11.1.jar:lib/jcl-over-slf4j-1.6.4.jar:lib/xml-apis-1.4.01.jar" destdir="doc" doctitle="Ancient Agora Virtual Tour" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="model,view,controller" source="1.7" sourcepath="test:src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

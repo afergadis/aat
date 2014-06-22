@@ -27,6 +27,10 @@ public interface History {
      */
     public abstract void addRecord(String data, int value);
     
+    /**
+     * Κάνει την εγγραφή στο αρχείο. Οι πληροφορίες κρατούνται στην μνήμη
+     * και γράφονται μόνο με την κλήση αυτής της συνάρτησης.
+     */
     public abstract void commit();
 
 }
