@@ -39,6 +39,9 @@ public class Aggregator {
 
 	public static void main(String[] args) {
 		Logger.getRootLogger().setLevel(Level.OFF);
+		// Clear screen
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
 
 		String owlPath = "OwlTemp.owl";
 		String NLResourcePath = "data";
@@ -209,7 +212,7 @@ public class Aggregator {
 	}
 
 	private static int readChoice(Scanner sc, String prompt, int low, int high) {
-		System.out.println("\n0: Exit");
+		System.out.println(PLAIN + "\n0: Exit");
 		// Scanner sc = new Scanner(System.in);
 		String choice;
 		int c; // The choice number
