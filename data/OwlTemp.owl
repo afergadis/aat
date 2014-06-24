@@ -1,0 +1,1090 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.mpiro.gr/Mpiro-Schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:OwlTemp.owl="http://localhost/OwlTemp.owl#"
+  xml:base="http://localhost/OwlTemp.owl#">
+  <owl:Ontology rdf:about="#"/>
+  <owl:Class rdf:ID="Archon">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Temple-type">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="UM_other-abstraction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Story">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Time-period">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="UM_named-time-period"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Horizons">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Temple">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ArchitecturalConstruction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Region">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="UM_spatial-location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Shrine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ArchitecturalConstruction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Stoa">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ArchitecturalConstruction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Orator">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Poet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hearth">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ArchitecturalConstruction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Building">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ArchitecturalConstruction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Nomothete">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Basic-Entity-Types"/>
+  <owl:Class rdf:ID="War">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Painter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sophist">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Tyrannicides">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Church">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ArchitecturalConstruction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Poliorketes-besieger">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hero">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Excursionist">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Metalic-material">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Material"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Street">
+    <rdfs:subClassOf rdf:resource="#UM_spatial-location"/>
+  </owl:Class>
+  <owl:Class rdf:ID="God">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Athens-benefactor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Historical-period">
+    <rdfs:subClassOf rdf:resource="#UM_named-time-period"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Historic-historiographer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Person">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="UM_human"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Tribe">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Description">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Emperor">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mythical-hero">
+    <rdfs:subClassOf rdf:resource="#Hero"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Colour">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="UM_substance-thing"/>
+  <owl:Class rdf:about="#Material">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Complex-statue">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Object-of-Art"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Direction">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ArchitecturalConstruction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="UM_3D-physical-object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Disease">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Country">
+    <rdfs:subClassOf rdf:resource="#UM_spatial-location"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Object-of-Art">
+    <rdfs:subClassOf rdf:resource="#UM_3D-physical-object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Historic-hero">
+    <rdfs:subClassOf rdf:resource="#Hero"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Admiral">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Host">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Politician">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tyrant">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Palace">
+    <rdfs:subClassOf rdf:resource="#ArchitecturalConstruction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Statue">
+    <rdfs:subClassOf rdf:resource="#Object-of-Art"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Ruler">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="City">
+    <rdfs:subClassOf rdf:resource="#UM_spatial-location"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cobbler">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sculptor">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Usage">
+    <rdfs:subClassOf rdf:resource="#UM_other-abstraction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Odeion">
+    <rdfs:subClassOf rdf:resource="#ArchitecturalConstruction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="King">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Altar">
+    <rdfs:subClassOf rdf:resource="#ArchitecturalConstruction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Architect">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Monument">
+    <rdfs:subClassOf rdf:resource="#ArchitecturalConstruction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Philosopher">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Museum">
+    <rdfs:subClassOf rdf:resource="#ArchitecturalConstruction"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="occupied-by">
+    <rdfs:range rdf:resource="#Host"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="construction-date">
+    <rdfs:range rdf:resource="#Time-period"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has-story">
+    <rdfs:range rdf:resource="#Story"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has-description">
+    <rdfs:range rdf:resource="#Description"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="period-of-use">
+    <rdfs:range rdf:resource="#Historical-period"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dedicated-by">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="constructed-by">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="used-for">
+    <rdfs:range rdf:resource="#Usage"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has-object-of-art">
+    <rdfs:range rdf:resource="#Object-of-Art"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is-located-in-side">
+    <rdfs:range rdf:resource="#Direction"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dedicated-to">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has-architect">
+    <rdfs:range rdf:resource="#Architect"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="made-of">
+    <rdfs:range rdf:resource="#Material"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="destruction-date">
+    <rdfs:range rdf:resource="#Time-period"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="ray">
+    <rdfs:range rdf:resource="http://www.mpiro.gr/Mpiro-Schema#mpiroNumber"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="diameter">
+    <rdfs:range rdf:resource="http://www.mpiro.gr/Mpiro-Schema#mpiroNumber"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="material-description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Material"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="has-width">
+    <rdfs:range rdf:resource="http://www.mpiro.gr/Mpiro-Schema#mpiroNumber"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="person-description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Person"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="has-length">
+    <rdfs:range rdf:resource="http://www.mpiro.gr/Mpiro-Schema#mpiroNumber"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="height">
+    <rdfs:range rdf:resource="http://www.mpiro.gr/Mpiro-Schema#mpiroNumber"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="generic-description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="fat">
+    <rdfs:range rdf:resource="http://www.mpiro.gr/Mpiro-Schema#mpiroNumber"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ArchitecturalConstruction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="period-description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Historical-period"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <OwlTemp.owl:Time-period rdf:ID="late-4th-CAD"/>
+  <OwlTemp.owl:Philosopher rdf:ID="socrates"/>
+  <OwlTemp.owl:Time-period rdf:ID="between-1953-and-1956"/>
+  <OwlTemp.owl:God rdf:ID="poseidon"/>
+  <OwlTemp.owl:Sculptor rdf:ID="agoracritus"/>
+  <OwlTemp.owl:God rdf:ID="apollo"/>
+  <OwlTemp.owl:Time-period rdf:ID="late-3rd-or-in-the-early-4th-CAD"/>
+  <OwlTemp.owl:Description rdf:ID="generic-stoa-description"/>
+  <OwlTemp.owl:God rdf:ID="kore"/>
+  <OwlTemp.owl:Architect rdf:ID="callikrates"/>
+  <OwlTemp.owl:Region rdf:ID="Acharnai"/>
+  <OwlTemp.owl:Historical-period rdf:ID="late-roman"/>
+  <OwlTemp.owl:King rdf:ID="ptolemy-philadelphus"/>
+  <OwlTemp.owl:Sculptor rdf:ID="alcamenes"/>
+  <OwlTemp.owl:Region rdf:ID="Piraeus"/>
+  <OwlTemp.owl:Description rdf:ID="altar-12-gods-description"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-410-400"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-220"/>
+  <OwlTemp.owl:Emperor rdf:ID="tiberius"/>
+  <OwlTemp.owl:Sculptor rdf:ID="critios"/>
+  <OwlTemp.owl:Philosopher rdf:ID="xenophon"/>
+  <OwlTemp.owl:Stoa rdf:ID="Generic-stoa"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-150"/>
+  <OwlTemp.owl:God rdf:ID="zeus"/>
+  <OwlTemp.owl:War rdf:ID="first-Mithridatic-war"/>
+  <OwlTemp.owl:Poliorketes-besieger rdf:ID="demetrius-poliorketes"/>
+  <OwlTemp.owl:Disease rdf:ID="pestilence"/>
+  <OwlTemp.owl:War rdf:ID="sack-of-Sulla"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-140"/>
+  <OwlTemp.owl:City rdf:ID="Persepolis"/>
+  <OwlTemp.owl:Street rdf:ID="Adrianou-street"/>
+  <OwlTemp.owl:Building rdf:ID="mint"/>
+  <OwlTemp.owl:Historical-period rdf:ID="archaic"/>
+  <OwlTemp.owl:Complex-statue rdf:ID="statues-of-armodius-and-aristogiton-tyrannicides"/>
+  <OwlTemp.owl:Sculptor rdf:ID="phidias"/>
+  <OwlTemp.owl:Time-period rdf:ID="after-421-BC"/>
+  <OwlTemp.owl:Sculptor rdf:ID="antenor"/>
+  <OwlTemp.owl:Cobbler rdf:ID="simon"/>
+  <OwlTemp.owl:King rdf:ID="alexander-the-great"/>
+  <OwlTemp.owl:Shrine rdf:ID="shrine-of-zeus-boulaios"/>
+  <OwlTemp.owl:Temple rdf:ID="southeast-temple"/>
+  <OwlTemp.owl:Painter rdf:ID="polygnotus"/>
+  <OwlTemp.owl:War rdf:ID="raid-of-the-Goth"/>
+  <OwlTemp.owl:City rdf:ID="Karystus"/>
+  <OwlTemp.owl:God rdf:ID="demeter"/>
+  <OwlTemp.owl:Shrine rdf:ID="shrine-of-the-mother-of-the-gods"/>
+  <OwlTemp.owl:Time-period rdf:ID="CBC-16-14"/>
+  <OwlTemp.owl:Building rdf:ID="square-peristyle"/>
+  <OwlTemp.owl:Region rdf:ID="Thoricus"/>
+  <OwlTemp.owl:Horizons rdf:ID="west"/>
+  <OwlTemp.owl:Temple rdf:ID="theseion">
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="BC-446-442">
+        <rdfs:label xml:lang="english">446-442 BC</rdfs:label>
+        <rdfs:label xml:lang="english">mid 5th century BC</rdfs:label>
+      </OwlTemp.owl:Time-period>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side>
+      <OwlTemp.owl:Direction rdf:ID="west-side"/>
+    </OwlTemp.owl:is-located-in-side>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="theseion-story"/>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:period-of-use>
+      <OwlTemp.owl:Historical-period rdf:ID="roman"/>
+    </OwlTemp.owl:period-of-use>
+    <OwlTemp.owl:made-of>
+      <OwlTemp.owl:Material rdf:ID="pentelic-marble"/>
+    </OwlTemp.owl:made-of>
+    <OwlTemp.owl:dedicated-to>
+      <OwlTemp.owl:God rdf:ID="hephaestus"/>
+    </OwlTemp.owl:dedicated-to>
+    <OwlTemp.owl:period-of-use>
+      <OwlTemp.owl:Historical-period rdf:ID="classical"/>
+    </OwlTemp.owl:period-of-use>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="temple-hephaestus-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:dedicated-to>
+      <OwlTemp.owl:God rdf:ID="athena-ergane"/>
+    </OwlTemp.owl:dedicated-to>
+    <OwlTemp.owl:period-of-use>
+      <OwlTemp.owl:Historical-period rdf:ID="hellenistic"/>
+    </OwlTemp.owl:period-of-use>
+  </OwlTemp.owl:Temple>
+  <OwlTemp.owl:City rdf:ID="Athens"/>
+  <OwlTemp.owl:Emperor rdf:ID="hadrian"/>
+  <OwlTemp.owl:Stoa rdf:ID="stoa-of-zeus-eleutherios">
+    <OwlTemp.owl:has-object-of-art>
+      <OwlTemp.owl:Statue rdf:ID="statue-of-hadrian"/>
+    </OwlTemp.owl:has-object-of-art>
+    <OwlTemp.owl:used-for>
+      <OwlTemp.owl:Usage rdf:ID="stoa-zeus-eleutherios-usage">
+        <rdfs:label>Apart from its religious function, the building was a popular promenade and place of rendezvous</rdfs:label>
+        <rdfs:label xml:lang="english">Apart from its religious function, the building was a meeting place, frequented by many Athenians. This is where Socrates met and conversed with his friend, as mentioned in the works of Plato and Xenophon. It has also been suggested that it was the sear of the thesmothetai, magistrates with legal and judiciary functions. This was probably the place they dinned and convened</rdfs:label>
+      </OwlTemp.owl:Usage>
+    </OwlTemp.owl:used-for>
+    <OwlTemp.owl:period-of-use rdf:resource="#classical"/>
+    <OwlTemp.owl:period-of-use rdf:resource="#roman"/>
+    <OwlTemp.owl:has-object-of-art>
+      <OwlTemp.owl:Statue rdf:ID="statue-of-zeus-eleutherios"/>
+    </OwlTemp.owl:has-object-of-art>
+    <OwlTemp.owl:is-located-in-side>
+      <OwlTemp.owl:Direction rdf:ID="northwest"/>
+    </OwlTemp.owl:is-located-in-side>
+    <OwlTemp.owl:period-of-use rdf:resource="#hellenistic"/>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="BC-430-420">
+        <rdfs:label xml:lang="english">430-420 BC</rdfs:label>
+        <rdfs:label xml:lang="english">the late 5th century</rdfs:label>
+      </OwlTemp.owl:Time-period>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:made-of rdf:resource="#pentelic-marble"/>
+    <OwlTemp.owl:dedicated-to>
+      <OwlTemp.owl:God rdf:ID="zeus-eleutherios">
+        <rdfs:seeAlso rdf:resource="#zeus-eleutherios"/>
+      </OwlTemp.owl:God>
+    </OwlTemp.owl:dedicated-to>
+    <OwlTemp.owl:has-object-of-art>
+      <OwlTemp.owl:Complex-statue rdf:ID="conon-and-his-son-timotheus">
+        <rdfs:seeAlso>
+          <OwlTemp.owl:Admiral rdf:ID="conon"/>
+        </rdfs:seeAlso>
+      </OwlTemp.owl:Complex-statue>
+    </OwlTemp.owl:has-object-of-art>
+    <OwlTemp.owl:has-object-of-art>
+      <OwlTemp.owl:Statue rdf:ID="statue-of-evagoras"/>
+    </OwlTemp.owl:has-object-of-art>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="stoa-zeus-description"/>
+    </OwlTemp.owl:has-description>
+  </OwlTemp.owl:Stoa>
+  <OwlTemp.owl:Time-period rdf:ID="BC-447"/>
+  <OwlTemp.owl:Material rdf:ID="wood"/>
+  <OwlTemp.owl:Shrine rdf:ID="road-side-shrine"/>
+  <OwlTemp.owl:Odeion rdf:ID="odeion-of-agrippa"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-409-405">
+    <rdfs:label xml:lang="english">the late 5th century BC</rdfs:label>
+    <rdfs:label xml:lang="english">409-405 BC</rdfs:label>
+  </OwlTemp.owl:Time-period>
+  <OwlTemp.owl:King rdf:ID="pyrrhus"/>
+  <OwlTemp.owl:Temple-type rdf:ID="Doric"/>
+  <OwlTemp.owl:Time-period rdf:ID="late-6th-or-the-early-5th-CBC"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-theseus"/>
+  <OwlTemp.owl:Historic-historiographer rdf:ID="diogenes-laertius"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-290-260"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-522-521"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-470-460"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-demos"/>
+  <OwlTemp.owl:Tyrant rdf:ID="hipparchus"/>
+  <OwlTemp.owl:Time-period rdf:ID="seventh-CBC"/>
+  <OwlTemp.owl:King rdf:ID="cassandrus"/>
+  <OwlTemp.owl:Building rdf:ID="basilica"/>
+  <OwlTemp.owl:Disease rdf:ID="famine"/>
+  <OwlTemp.owl:Historic-historiographer rdf:ID="thucydides"/>
+  <OwlTemp.owl:Time-period rdf:ID="last-quarter-of-the-5th-CBC"/>
+  <OwlTemp.owl:Horizons rdf:ID="south"/>
+  <OwlTemp.owl:King rdf:ID="lysimachus"/>
+  <OwlTemp.owl:King rdf:ID="alexander"/>
+  <OwlTemp.owl:Building rdf:ID="propylon-next-to-the-old-bouleterion"/>
+  <OwlTemp.owl:Story rdf:ID="southwest-fountain-story"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-430-and-420"/>
+  <OwlTemp.owl:Time-period rdf:ID="AD-125"/>
+  <OwlTemp.owl:Hearth rdf:ID="eschara"/>
+  <OwlTemp.owl:Time-period rdf:ID="after-14-AD"/>
+  <OwlTemp.owl:Time-period rdf:ID="late-4th-CBC"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-demetrius"/>
+  <OwlTemp.owl:King rdf:ID="pleistarchus"/>
+  <OwlTemp.owl:Colour rdf:ID="azure-grey"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-200"/>
+  <OwlTemp.owl:Time-period rdf:ID="fifth-CAD"/>
+  <OwlTemp.owl:Region rdf:ID="Kerameikos"/>
+  <OwlTemp.owl:City rdf:ID="Corinth"/>
+  <OwlTemp.owl:Description rdf:ID="theseion-description">
+    <rdfs:label xml:lang="english">Theseion (=the Temple of Hephaestus), on the hill of Agoraios Kolonos (=Market Hill) is one of the most important monuments of the Pericleian Building Programme. The temple was richly decorated with sculptures; . It survived the raid of the Heruli and that of the Goths; it was converted to a Christian church of St George in the 7th cent., and continued to be used a place of Christian worship until 1833. Since then it was used as a museum, until 1950 when excavations were conducted in its interior</rdfs:label>
+    <rdfs:label xml:lang="english">Theseion (=the Temple of Hephaestus), on the hill of Agoraios Kolonos (=Market Hill) is the best preserved example of a Doric order temple in Greece, and one of the most important monuments of the Pericleian Building Programme. The temple was richly adorned with sculptures; it comprised metopes at its east side and the east corners of the north and south sides, an Ionic frieze above the peristasis in the pronaos and pediments which survive in a poor condition. It survived the raid of the Heruli and that of the Goths; it was converted to a Christian church of St George in the 7th cent., and continued to be used a place of Christian worship until 1833. Since then it was used as a museum, until 1950 when excavations were conducted in its interior</rdfs:label>
+  </OwlTemp.owl:Description>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-zeus-phratrios-and-athena-phratria">
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="temple-zeus-athena-story"/>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="second-half-of-the-4th-CBC"/>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#west-side"/>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="temple-zeus-athena-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:made-of rdf:resource="#pentelic-marble"/>
+    <OwlTemp.owl:period-of-use rdf:resource="#hellenistic"/>
+  </OwlTemp.owl:Temple>
+  <OwlTemp.owl:Time-period rdf:ID="BC-477-476"/>
+  <OwlTemp.owl:Stoa rdf:ID="middle-stoa">
+    <OwlTemp.owl:dedicated-by>
+      <OwlTemp.owl:Ruler rdf:ID="pharnakes-I">
+        <rdfs:seeAlso rdf:resource="#pharnakes-I"/>
+      </OwlTemp.owl:Ruler>
+    </OwlTemp.owl:dedicated-by>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="second-CBC">
+        <rdfs:label xml:lang="english">in 2nd century BC</rdfs:label>
+        <rdfs:label xml:lang="english">around 180 BC</rdfs:label>
+      </OwlTemp.owl:Time-period>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side>
+      <OwlTemp.owl:Direction rdf:ID="south-side"/>
+    </OwlTemp.owl:is-located-in-side>
+    <OwlTemp.owl:destruction-date>
+      <OwlTemp.owl:Time-period rdf:ID="BC-86">
+        <rdfs:label xml:lang="english">in 86 BC</rdfs:label>
+        <rdfs:label xml:lang="english">in the mid 1st century BC</rdfs:label>
+      </OwlTemp.owl:Time-period>
+    </OwlTemp.owl:destruction-date>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="middle-stoa-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:period-of-use rdf:resource="#hellenistic"/>
+  </OwlTemp.owl:Stoa>
+  <OwlTemp.owl:Metalic-material rdf:ID="copper"/>
+  <OwlTemp.owl:Time-period rdf:ID="late-3rd-CAD"/>
+  <OwlTemp.owl:Excursionist rdf:ID="pausanias"/>
+  <OwlTemp.owl:King rdf:ID="ptolemy"/>
+  <OwlTemp.owl:Building rdf:ID="southeast-fountain">
+    <OwlTemp.owl:used-for>
+      <OwlTemp.owl:Usage rdf:ID="usage-of-fountain">
+        <rdfs:label xml:lang="english">for providing drinkable water</rdfs:label>
+        <rdfs:label xml:lang="english">for providing potable water</rdfs:label>
+      </OwlTemp.owl:Usage>
+    </OwlTemp.owl:used-for>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="southeast-fountain-story">
+        <rdfs:label xml:lang="english">Pausanias thought that this building was the Enneakrounos, the famous fountain built by Peisistratus</rdfs:label>
+        <rdfs:label xml:lang="english">Pausanias thought that this building was the Enneakrounos, the famous fountain built by Peisistratus. This view, however, is contradicted by a piece of information surviving in Thucydides, according to which the Enneakrounos was situated in another part of the city. It is virtually impossible to reconstruct the building so as to incorporate nine spouts</rdfs:label>
+      </OwlTemp.owl:Story>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="BC-530-520">
+        <rdfs:label xml:lang="english">530-520 BC</rdfs:label>
+        <rdfs:label xml:lang="english">circa 500 BC</rdfs:label>
+        <rdfs:label xml:lang="english">the late 6th century</rdfs:label>
+      </OwlTemp.owl:Time-period>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side>
+      <OwlTemp.owl:Direction rdf:ID="southeast"/>
+    </OwlTemp.owl:is-located-in-side>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="southeast-fountain-description">
+        <rdfs:label>is an oblong square and a narrow passage separates it from the South Stoa Ι</rdfs:label>
+        <rdfs:label>For the superstructure there are two suggestions: the original hypothesis of the excavators, who have depicted a building of 3 Doric columns on its facade.The other view was formulated by L.C. Merit and ascribes to the fountain two Archaic Ionic columns and three bases of Ionic columns of island marble, which definitely do not originate from the same building. This suggestion has not gained acceptance, and for this reason we preferred to use the first suggestion as a basis for the representation. The extensive modifications of the 1st half of the 4th cent. BC do not alter its interior. Its form during the Roman period is unknown, when many other fountain structures were in still in use in the south part of the Agora; on the other hand, there is no indication that it was demolished. Therefore, we have retained the same representation for all the phases</rdfs:label>
+      </OwlTemp.owl:Description>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:period-of-use rdf:resource="#roman"/>
+    <OwlTemp.owl:period-of-use rdf:resource="#hellenistic"/>
+    <OwlTemp.owl:period-of-use rdf:resource="#classical"/>
+  </OwlTemp.owl:Building>
+  <OwlTemp.owl:Politician rdf:ID="pericleus"/>
+  <OwlTemp.owl:Direction rdf:ID="eastern"/>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-zeus-eleutherios">
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="altar-zeus-eleftherios-story"/>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#northwest"/>
+    <OwlTemp.owl:period-of-use rdf:resource="#classical"/>
+  </OwlTemp.owl:Altar>
+  <OwlTemp.owl:Time-period rdf:ID="before-420-BC"/>
+  <OwlTemp.owl:Sculptor rdf:ID="leocharis"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-508-507"/>
+  <OwlTemp.owl:Time-period rdf:ID="after-450-BC"/>
+  <OwlTemp.owl:Nomothete rdf:ID="solon"/>
+  <OwlTemp.owl:God rdf:ID="aphrodite"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-calades"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-436-432"/>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-poseidon-in-sunium"/>
+  <OwlTemp.owl:God rdf:ID="rea"/>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-the-twelve-gods">
+    <OwlTemp.owl:dedicated-by>
+      <OwlTemp.owl:Tyrant rdf:ID="pisistratus"/>
+    </OwlTemp.owl:dedicated-by>
+  </OwlTemp.owl:Altar>
+  <OwlTemp.owl:Nomothete rdf:ID="draco"/>
+  <OwlTemp.owl:Time-period rdf:ID="mid-2nd-CAD"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-apollo"/>
+  <OwlTemp.owl:Time-period rdf:ID="second-CAD"/>
+  <OwlTemp.owl:Metalic-material rdf:ID="silver"/>
+  <OwlTemp.owl:Temple rdf:ID="monopteros-temple"/>
+  <OwlTemp.owl:Mythical-hero rdf:ID="sciron"/>
+  <OwlTemp.owl:Region rdf:ID="Pallene"/>
+  <OwlTemp.owl:God rdf:ID="eos"/>
+  <OwlTemp.owl:Archon rdf:ID="cleisthenes"/>
+  <OwlTemp.owl:Building rdf:ID="skeuotheke-of-philo"/>
+  <OwlTemp.owl:Emperor rdf:ID="livia"/>
+  <OwlTemp.owl:Temple-type rdf:ID="Ionic"/>
+  <OwlTemp.owl:Philosopher rdf:ID="athenion"/>
+  <OwlTemp.owl:Monument rdf:ID="bema-rostrum"/>
+  <OwlTemp.owl:Emperor rdf:ID="trajan"/>
+  <OwlTemp.owl:Region rdf:ID="Penteli"/>
+  <OwlTemp.owl:Shrine rdf:ID="shrine-of-zeus-eleutherios"/>
+  <OwlTemp.owl:Tyrannicides rdf:ID="aristogiton"/>
+  <OwlTemp.owl:Building rdf:ID="southwest-fountain">
+    <OwlTemp.owl:used-for rdf:resource="#usage-of-fountain"/>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="mid-4th-CBC"/>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side>
+      <OwlTemp.owl:Direction rdf:ID="southwest"/>
+    </OwlTemp.owl:is-located-in-side>
+    <OwlTemp.owl:destruction-date rdf:resource="#BC-86"/>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="soutwest-fountain-description"/>
+    </OwlTemp.owl:has-description>
+  </OwlTemp.owl:Building>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-apollo-prostaterios"/>
+  <OwlTemp.owl:Time-period rdf:ID="before-412-411-BC"/>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-zeus-agoraios">
+    <OwlTemp.owl:is-located-in-side rdf:resource="#northwest"/>
+  </OwlTemp.owl:Altar>
+  <OwlTemp.owl:War rdf:ID="battle-of-the-Athenias-against-the-Amazons"/>
+  <OwlTemp.owl:Time-period rdf:ID="in-the-7th-CAD"/>
+  <OwlTemp.owl:Time-period rdf:ID="up-to-1937"/>
+  <OwlTemp.owl:Time-period rdf:ID="late-1st-early-2nd-CAD"/>
+  <OwlTemp.owl:Time-period rdf:ID="fourth-CAD"/>
+  <OwlTemp.owl:Time-period rdf:ID="third-and-2nd-CBC"/>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-hephaestus">
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="fifth-CBC"/>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#west-side"/>
+    <OwlTemp.owl:has-description rdf:resource="#temple-hephaestus-description"/>
+    <OwlTemp.owl:made-of rdf:resource="#pentelic-marble"/>
+    <OwlTemp.owl:period-of-use rdf:resource="#classical"/>
+  </OwlTemp.owl:Temple>
+  <OwlTemp.owl:Palace rdf:ID="palace-of-the-giants"/>
+  <OwlTemp.owl:Time-period rdf:ID="AD-160"/>
+  <OwlTemp.owl:Colour rdf:ID="blue"/>
+  <OwlTemp.owl:Temple rdf:ID="classical-temple-of-athena-in-pallene"/>
+  <OwlTemp.owl:War rdf:ID="battle-of-Oinoe"/>
+  <OwlTemp.owl:Time-period rdf:ID="AD-150"/>
+  <OwlTemp.owl:Street rdf:ID="Panathenaic-way"/>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-nemesis-in-rhamnous"/>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-hearth-boulaia"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-hercules"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-180"/>
+  <OwlTemp.owl:Time-period rdf:ID="first-half-of-the-4th-CBC"/>
+  <OwlTemp.owl:Country rdf:ID="Egypt"/>
+  <OwlTemp.owl:Time-period rdf:ID="AD-140"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-303-302"/>
+  <OwlTemp.owl:Sculptor rdf:ID="calamis"/>
+  <OwlTemp.owl:Building rdf:ID="nymphaeum"/>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-zeus"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-pindar"/>
+  <OwlTemp.owl:Philosopher rdf:ID="plato"/>
+  <OwlTemp.owl:Direction rdf:ID="northern"/>
+  <OwlTemp.owl:Complex-statue rdf:ID="statues-of-philadephus-and-arsinoe"/>
+  <OwlTemp.owl:Stoa rdf:ID="stoa-of-attalus">
+    <OwlTemp.owl:dedicated-by>
+      <OwlTemp.owl:Athens-benefactor rdf:ID="attalus-II"/>
+    </OwlTemp.owl:dedicated-by>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="stoa-of-attalos-story"/>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:construction-date rdf:resource="#second-CBC"/>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#west-side"/>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="stoa-of-attalos-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:made-of>
+      <OwlTemp.owl:Material rdf:ID="hymettian-marble">
+        <rdfs:seeAlso rdf:resource="#hymettian-marble"/>
+      </OwlTemp.owl:Material>
+    </OwlTemp.owl:made-of>
+    <OwlTemp.owl:period-of-use rdf:resource="#hellenistic"/>
+  </OwlTemp.owl:Stoa>
+  <OwlTemp.owl:Church rdf:ID="st-george"/>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-athena-sunias"/>
+  <OwlTemp.owl:Shrine rdf:ID="the-quadrilateral-peribolos-or-aiakeion">
+    <OwlTemp.owl:dedicated-to>
+      <OwlTemp.owl:Historic-hero rdf:ID="aiakos"/>
+    </OwlTemp.owl:dedicated-to>
+    <OwlTemp.owl:used-for>
+      <OwlTemp.owl:Usage rdf:ID="usage-of-shrine"/>
+    </OwlTemp.owl:used-for>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="aiakeion-story"/>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#southwest"/>
+    <OwlTemp.owl:occupied-by>
+      <OwlTemp.owl:Host rdf:ID="bronze-working-and-pottery-workshops"/>
+    </OwlTemp.owl:occupied-by>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="aiakeion-description"/>
+    </OwlTemp.owl:has-description>
+  </OwlTemp.owl:Shrine>
+  <OwlTemp.owl:Monument rdf:ID="monument-of-the-eponymous-heroes"/>
+  <OwlTemp.owl:Stoa rdf:ID="stoa-poikile"/>
+  <OwlTemp.owl:Time-period rdf:ID="first-half-of-the-5th-CAD"/>
+  <OwlTemp.owl:War rdf:ID="raid-of-the-Heruli"/>
+  <OwlTemp.owl:Horizons rdf:ID="east"/>
+  <OwlTemp.owl:Emperor rdf:ID="augustus"/>
+  <OwlTemp.owl:Complex-statue rdf:ID="statues-of-lysimachus-and-pyrrhus"/>
+  <OwlTemp.owl:Direction rdf:ID="northeast"/>
+  <OwlTemp.owl:Building rdf:ID="metroon">
+    <OwlTemp.owl:destruction-date>
+      <OwlTemp.owl:Time-period rdf:ID="BC-480">
+        <rdfs:label xml:lang="english">480 BC</rdfs:label>
+        <rdfs:label xml:lang="english">the early 5th century BC</rdfs:label>
+      </OwlTemp.owl:Time-period>
+    </OwlTemp.owl:destruction-date>
+    <OwlTemp.owl:made-of rdf:resource="#pentelic-marble"/>
+    <OwlTemp.owl:made-of rdf:resource="#hymettian-marble"/>
+  </OwlTemp.owl:Building>
+  <OwlTemp.owl:Philosopher rdf:ID="aristotle"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-480-479"/>
+  <OwlTemp.owl:Architect rdf:ID="vitruvius"/>
+  <OwlTemp.owl:Time-period rdf:ID="fourth-CBC"/>
+  <OwlTemp.owl:Mythical-hero rdf:ID="hercules"/>
+  <OwlTemp.owl:God rdf:ID="ares"/>
+  <OwlTemp.owl:Horizons rdf:ID="north"/>
+  <OwlTemp.owl:Tribe rdf:ID="Heruli"/>
+  <OwlTemp.owl:King rdf:ID="ptolemy-lagos-or-soter"/>
+  <OwlTemp.owl:Time-period rdf:ID="late-5th-CBC"/>
+  <OwlTemp.owl:Time-period rdf:ID="in-1953"/>
+  <OwlTemp.owl:Monument rdf:ID="hellenistic-gate"/>
+  <OwlTemp.owl:Painter rdf:ID="micon"/>
+  <OwlTemp.owl:King rdf:ID="phillip"/>
+  <OwlTemp.owl:Colour rdf:ID="green"/>
+  <OwlTemp.owl:King rdf:ID="xerxes"/>
+  <OwlTemp.owl:Tyrannicides rdf:ID="harmodius"/>
+  <OwlTemp.owl:Building rdf:ID="armoury"/>
+  <OwlTemp.owl:God rdf:ID="athena"/>
+  <OwlTemp.owl:Poet rdf:ID="pindar"/>
+  <OwlTemp.owl:Usage rdf:ID="metroon-usage"/>
+  <OwlTemp.owl:Temple rdf:ID="southwest-temple">
+    <OwlTemp.owl:construction-date rdf:resource="#mid-4th-CBC"/>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#southwest"/>
+    <OwlTemp.owl:destruction-date rdf:resource="#BC-86"/>
+  </OwlTemp.owl:Temple>
+  <OwlTemp.owl:Sculptor rdf:ID="nesiotes"/>
+  <OwlTemp.owl:Time-period rdf:ID="during-the-3rd-CBC"/>
+  <OwlTemp.owl:Archon rdf:ID="basileus"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-demeter"/>
+  <OwlTemp.owl:Museum rdf:ID="Agora-museum"/>
+  <OwlTemp.owl:Sophist rdf:ID="hippias"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-267"/>
+  <OwlTemp.owl:Time-period rdf:ID="second-half-of-the-5th-CBC"/>
+  <OwlTemp.owl:King rdf:ID="attalos"/>
+  <OwlTemp.owl:Building rdf:ID="library-of-pantainos"/>
+  <OwlTemp.owl:Church rdf:ID="church-of-aghion-apostolon"/>
+  <OwlTemp.owl:Time-period rdf:ID="first-CAD"/>
+  <OwlTemp.owl:Architect rdf:ID="ictinus"/>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-ares">
+    <OwlTemp.owl:has-object-of-art>
+      <OwlTemp.owl:Statue rdf:ID="adorational-statue-of-temple-of-Ares"/>
+    </OwlTemp.owl:has-object-of-art>
+    <OwlTemp.owl:is-located-in-side>
+      <OwlTemp.owl:Direction rdf:ID="centre"/>
+    </OwlTemp.owl:is-located-in-side>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="temple-of-Ares-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:has-architect>
+      <OwlTemp.owl:Architect rdf:ID="architect-of-hephaisteion"/>
+    </OwlTemp.owl:has-architect>
+    <OwlTemp.owl:period-of-use rdf:resource="#roman"/>
+    <OwlTemp.owl:destruction-date>
+      <OwlTemp.owl:Time-period rdf:ID="AD-267"/>
+    </OwlTemp.owl:destruction-date>
+    <OwlTemp.owl:made-of rdf:resource="#pentelic-marble"/>
+    <OwlTemp.owl:construction-date rdf:resource="#fifth-CBC"/>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="temple-of-Ares-story"/>
+    </OwlTemp.owl:has-story>
+  </OwlTemp.owl:Temple>
+  <OwlTemp.owl:Building rdf:ID="enneakrounos">
+    <OwlTemp.owl:used-for>
+      <OwlTemp.owl:Usage rdf:ID="enneakrounos-usage"/>
+    </OwlTemp.owl:used-for>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="enneakrounos-story"/>
+    </OwlTemp.owl:has-story>
+  </OwlTemp.owl:Building>
+  <OwlTemp.owl:Shrine rdf:ID="shrine-of-hecate"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-88"/>
+  <OwlTemp.owl:Building rdf:ID="old-bouleuterion"/>
+  <OwlTemp.owl:God rdf:ID="hecate"/>
+  <OwlTemp.owl:Building rdf:ID="areios-pagos">
+    <OwlTemp.owl:is-located-in-side rdf:resource="#northwest"/>
+    <OwlTemp.owl:destruction-date rdf:resource="#AD-267"/>
+  </OwlTemp.owl:Building>
+  <OwlTemp.owl:Story rdf:ID="altar-of-the-12gods-story"/>
+  <OwlTemp.owl:Colour rdf:ID="white"/>
+  <OwlTemp.owl:Complex-statue rdf:ID="statues-of-phillip-and-alexander"/>
+  <OwlTemp.owl:Time-period rdf:ID="between-98-and-102-AD"/>
+  <OwlTemp.owl:Country rdf:ID="Greece"/>
+  <OwlTemp.owl:City rdf:ID="Argos"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-300"/>
+  <OwlTemp.owl:Building rdf:ID="house-of-simon"/>
+  <OwlTemp.owl:War rdf:ID="sack-of-Troy"/>
+  <OwlTemp.owl:Emperor rdf:ID="empress-eudocia"/>
+  <OwlTemp.owl:Building rdf:ID="new-bouleuterion"/>
+  <OwlTemp.owl:City rdf:ID="Rome"/>
+  <OwlTemp.owl:Shrine rdf:ID="shrine-of-athena-boulaia"/>
+  <OwlTemp.owl:Description rdf:ID="metroon-description">
+    <rdfs:label xml:lang="english"></rdfs:label>
+    <rdfs:label xml:lang="english">It included four rooms, that had the entry them each one in the Eastern side and they intercommunicate from each other, while front for them was opened to easts common gallery with 14 ionian columns. First from the rooms to south it was also bigger in dimensions,that you shape aithrio and gallery (exosti), while it is not excluded existed also altar in the centre aithrioy. The rooms that were potentially shaped in the gallery can they were useful as dwellings (spaces of hospitality) for the stay of foreigner official persons and dignitaries or as public file (initially was considered, rather erroneously, that in this room was stored the government owned archival material)</rdfs:label>
+  </OwlTemp.owl:Description>
+  <OwlTemp.owl:Direction rdf:ID="north-side"/>
+  <OwlTemp.owl:King rdf:ID="antigonus"/>
+  <OwlTemp.owl:War rdf:ID="battle-of-Marathon"/>
+  <OwlTemp.owl:Time-period rdf:ID="after-510-BC"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-519"/>
+  <OwlTemp.owl:Building rdf:ID="tholos-or-skias"/>
+  <OwlTemp.owl:Statue rdf:ID="statue-of-ptolemy-lagos-or-soter"/>
+  <OwlTemp.owl:Statue rdf:ID="apollo-alexikakos"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-430"/>
+  <OwlTemp.owl:Street rdf:ID="Wide-street"/>
+  <OwlTemp.owl:Philosopher rdf:ID="zeno"/>
+  <OwlTemp.owl:Stoa rdf:ID="stoa-basileios-royal-stoa"/>
+  <OwlTemp.owl:Building rdf:ID="parthenon"/>
+  <OwlTemp.owl:City rdf:ID="Olympia"/>
+  <OwlTemp.owl:Time-period rdf:ID="sixth-CAD"/>
+  <OwlTemp.owl:Time-period rdf:ID="BC-514"/>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-aphrodite-ourania">
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="altar-of-Aphrodite-Ourania-story"/>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="BC-500"/>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#south-side"/>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="altar-of-Aphrodite-Ourania-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:made-of>
+      <OwlTemp.owl:Material rdf:ID="cycladic-marble"/>
+    </OwlTemp.owl:made-of>
+  </OwlTemp.owl:Altar>
+  <OwlTemp.owl:Stoa rdf:ID="south-stoa-II">
+    <OwlTemp.owl:used-for>
+      <OwlTemp.owl:Usage rdf:ID="usage-stoa-II"/>
+    </OwlTemp.owl:used-for>
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="south-stoa-II-story">
+        <rdfs:label xml:lang="english">Part of South Stoa II was constructed over the ruins of South Stoa I, with a slightly different orientation. Together with the MIddle Stoa and the East Building they formed the South Square</rdfs:label>
+        <rdfs:label xml:lang="english">Part of South Stoa II was constructed over the ruins of South Stoa I, with a slightly different orientation, as it was parallel to the Middle Stoa and the East Building, with which it formed the complex of the South Square</rdfs:label>
+      </OwlTemp.owl:Story>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#south-side"/>
+    <OwlTemp.owl:destruction-date rdf:resource="#BC-86"/>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="south-stoa-ii-descritpion"/>
+    </OwlTemp.owl:has-description>
+  </OwlTemp.owl:Stoa>
+  <OwlTemp.owl:Shrine rdf:ID="triangular-shrine"/>
+  <OwlTemp.owl:Time-period rdf:ID="first-CBC">
+    <rdfs:label></rdfs:label>
+  </OwlTemp.owl:Time-period>
+  <OwlTemp.owl:Painter rdf:ID="panaenus"/>
+  <OwlTemp.owl:Time-period rdf:ID="until-1833"/>
+  <OwlTemp.owl:Stoa rdf:ID="south-stoa-I">
+    <OwlTemp.owl:used-for>
+      <OwlTemp.owl:Usage rdf:ID="usage-stoa-I">
+        <rdfs:label xml:lang="english">business and official dinners, mostly serving the nearby Theseum</rdfs:label>
+        <rdfs:label xml:lang="english">administrative but also commercial purposes. It is suggested that the stoa served exclusively the needs of the nearby Theseion, where the celebrations involved the giving of sacred dinners</rdfs:label>
+      </OwlTemp.owl:Usage>
+    </OwlTemp.owl:used-for>
+    <OwlTemp.owl:construction-date rdf:resource="#BC-430-420"/>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#south-side"/>
+    <OwlTemp.owl:destruction-date>
+      <OwlTemp.owl:Time-period rdf:ID="mid-2nd-CBC"/>
+    </OwlTemp.owl:destruction-date>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="south-stoa-i-descritption">
+        <rdfs:label xml:lang="english">is an elongated, rectangular in plan stoa with an outer colonnade of 45 unfluted columns and an inner colonnade of 22 coated columns, probably of the Ionic order (as it was common in similar buildings of the 5th cent. BC)</rdfs:label>
+      </OwlTemp.owl:Description>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:period-of-use rdf:resource="#classical"/>
+  </OwlTemp.owl:Stoa>
+  <OwlTemp.owl:War rdf:ID="battle-of-Mantineia"/>
+  <OwlTemp.owl:Building rdf:ID="east-building"/>
+  <OwlTemp.owl:Time-period rdf:ID="until-150-CBC"/>
+  <OwlTemp.owl:Direction rdf:ID="southern"/>
+  <OwlTemp.owl:Mythical-hero rdf:ID="theseus"/>
+  <OwlTemp.owl:Temple rdf:ID="temple-of-apollo-patroos">
+    <OwlTemp.owl:has-story>
+      <OwlTemp.owl:Story rdf:ID="temple-of-Apollo-Patroos-story">
+        <rdfs:label xml:lang="english">Apollo is called Patroos (=the Father), because of a legend which made him father of Ion, founder of the Ionian race. The temple housed a statue of Apollo Alexikakos (=Averther of Evil), a work of Calamis, a sculpture by Leocharis. According to earlier views, an Archaic temple or an open-air sanctuary dedicated to the same divinity used to stand in the same site, while more recent studies maintain that the site's previous was completely different.</rdfs:label>
+        <rdfs:label xml:lang="english">Apollo is called Patroos (=the Father), because of a legend which made him father of Ion. The temple housed a statue of Apollo Alexikakos (=Averther of Evil), a work of Calamis, a sculpture by Leocharis and the god's adorational statue which was crafted by the sculptor Euphranor. According to earlier views, an Archaic temple or an open-air sanctuary dedicated to the same divinity used to stand in the same site, while more recent studies maintain that the site's previous was completely different, claiming that it was possibly taken up by a workshop.</rdfs:label>
+      </OwlTemp.owl:Story>
+    </OwlTemp.owl:has-story>
+    <OwlTemp.owl:construction-date>
+      <OwlTemp.owl:Time-period rdf:ID="third-quarter-of-the-4th-CBC"/>
+    </OwlTemp.owl:construction-date>
+    <OwlTemp.owl:is-located-in-side rdf:resource="#west-side"/>
+    <OwlTemp.owl:has-description>
+      <OwlTemp.owl:Description rdf:ID="temple-of-Apollo-Patroos-description"/>
+    </OwlTemp.owl:has-description>
+    <OwlTemp.owl:made-of>
+      <OwlTemp.owl:Material rdf:ID="limestone"/>
+    </OwlTemp.owl:made-of>
+  </OwlTemp.owl:Temple>
+  <OwlTemp.owl:Altar rdf:ID="altar-of-ares"/>
+  <OwlTemp.owl:Orator rdf:ID="herodes-atticus"/>
+  <OwlTemp.owl:Time-period rdf:ID="during-the-2nd-CAD"/>
+  <OwlTemp.owl:Sculptor rdf:ID="euphranor"/>
+</rdf:RDF>

@@ -21,6 +21,7 @@ import model.UserTourFile;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.fusesource.jansi.AnsiConsole;
 
 import controller.History;
 import controller.QueryProfiles;
@@ -40,11 +41,21 @@ public class Aggregator {
 	public static void main(String[] args) {
 		Logger.getRootLogger().setLevel(Level.OFF);
 		// Clear screen
-		System.out.print("\033[H\033[2J");
+		AnsiConsole.out.print("\033[H\033[2J");
 		System.out.flush();
 
-		String owlPath = "OwlTemp.owl";
-		String NLResourcePath = "data";
+		String OS = System.getProperty("os.name");
+		String owlPath = null;
+		String NLResourcePath = null;
+		
+		if (OS.startsWith("Windows")) {
+			owlPath = "data/OwlTemp.owl";
+			NLResourcePath = "data";
+		} else {
+			owlPath = System.getProperty("user.dir")
+					+ "/data/OwlTemp.owl";
+			NLResourcePath = System.getProperty("user.dir") + "/data";
+		}
 		String up; // User Profile
 		qp = new QueryProfilesOWL();
 		List<String> profiles = qp.getProfiles();
@@ -66,7 +77,7 @@ public class Aggregator {
 		}
 		int choice = readChoice(sc, "Choose Profile Number", 0, profiles.size());
 		if (choice == -1) {
-			exit("Bye", 0);
+			exit("", 0);
 		}
 
 		up = profiles.get(choice).toLowerCase();
@@ -83,14 +94,14 @@ public class Aggregator {
 			} catch (IOException e1) {
 				exit("Could not read file " + filename, 1);
 			}
-			System.out.println(legend);
+			AnsiConsole.out.println(legend);
 			// Διάβασε την ξενάγηση
 			ut = new UserTourFile(up);
 			System.out.println("Start by viewing:");
 			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
 					.getDescr(), null);
 			if (choice == -1) {
-				exit("Bye", 0);
+				exit("", 0);
 			}
 			break;
 		case "advanced":
@@ -99,13 +110,13 @@ public class Aggregator {
 			} catch (IOException e1) {
 				exit("Could not read file " + filename, 1);
 			}
-			System.out.println(legend);
+			AnsiConsole.out.println(legend);
 			ut = new UserTourFile(up);
 			System.out.println("Start by viewing (suggestion in bold):");
 			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
 					.getDescr(), null);
 			if (choice == -1) {
-				exit("Bye", 0);
+				exit("", 0);
 			}
 			break;
 		default:
@@ -154,7 +165,7 @@ public class Aggregator {
 			choice = readExhibit(sc, "\t", ut.getObjects(),
 					exhibit.getSuggestions(), h.getHistory());
 			if (choice == -1) {
-				exit("Bye", 0);
+				exit("", 0);
 			}
 
 			// Καταχώρησε τις προτάσεις του προηγούμενου εκθέματος
@@ -179,7 +190,6 @@ public class Aggregator {
 
 		}
 		sc.close();
-		System.out.println("Bye");
 	}
 
 	private static void startNLG(String owlPath, String NLResourcePath,
@@ -212,7 +222,7 @@ public class Aggregator {
 	}
 
 	private static int readChoice(Scanner sc, String prompt, int low, int high) {
-		System.out.println(PLAIN + "\n0: Exit");
+		AnsiConsole.out.println(PLAIN + "\n0: Exit");
 		// Scanner sc = new Scanner(System.in);
 		String choice;
 		int c; // The choice number
@@ -234,16 +244,15 @@ public class Aggregator {
 		int i = 1;
 		for (TourStep o : exhibits) {
 			if (o.getDescr().equals(s1) || o.getDescr().equals(s2))
-				System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+				AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
 						o.getDescr());
 			else
-				System.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
+				AnsiConsole.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
 						o.getDescr());
 			i++;
 		}
 
-		return readChoice(sc,
-				"Choose a Number (suggestions in bold)", 0, i - 1);
+		return readChoice(sc, "Choose a Number (suggestions in bold)", 0, i - 1);
 	}
 
 	private static int readExhibit(Scanner sc, String prompt,
@@ -255,7 +264,7 @@ public class Aggregator {
 			for (String s : history) {
 				// Δες αν το αντικείμενο είναι στη λίστα ιστορικού
 				if (o.getName().equals(s)) {
-					System.out.printf("%s%s%2d: %s\n", STRIKE, prompt, i,
+					AnsiConsole.out.printf("%s%s%2d: %s\n", STRIKE, prompt, i,
 							o.getDescr());
 					suggested = true; // Είναι, το τυπώσαμε
 					break;
@@ -265,7 +274,7 @@ public class Aggregator {
 				for (String s : suggestions) {
 					// Δες αν το αντικείμενο είναι στη λίστα suggestions
 					if (o.getName().equals(s)) {
-						System.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+						AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
 								o.getDescr());
 						suggested = true; // Είναι, το τυπώσαμε
 						break;
@@ -273,7 +282,7 @@ public class Aggregator {
 				}
 			}
 			if (!suggested) // Αν δεν έχει τυπωθεί, τύπωσέ το
-				System.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
+				AnsiConsole.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
 						o.getDescr());
 			i++;
 			suggested = false; // reset
@@ -284,14 +293,10 @@ public class Aggregator {
 	}
 
 	private static void exit(String msg, int value) {
-		// Αποθήκευση του ιστορικού
-		if (h != null) {
-			h.commit();
-		}
 		System.out.println(msg);
 		System.exit(value);
 	}
-	
+
 	static class ShutDown extends Thread {
 		@Override
 		public void run() {
