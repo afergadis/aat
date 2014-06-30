@@ -44,18 +44,9 @@ public class Aggregator {
 		AnsiConsole.out.print("\033[H\033[2J");
 		System.out.flush();
 
-		String OS = System.getProperty("os.name");
-		String owlPath = null;
-		String NLResourcePath = null;
-		
-		if (OS.startsWith("Windows")) {
-			owlPath = "data/OwlTemp.owl";
-			NLResourcePath = "data";
-		} else {
-			owlPath = System.getProperty("user.dir")
-					+ "/data/OwlTemp.owl";
-			NLResourcePath = System.getProperty("user.dir") + "/data";
-		}
+		String owlPath = System.getProperty("user.dir") + "/data/OwlTemp.owl";
+		String NLResourcePath = System.getProperty("user.dir") + "/data";
+
 		String up; // User Profile
 		qp = new QueryProfilesOWL();
 		List<String> profiles = qp.getProfiles();
@@ -274,8 +265,8 @@ public class Aggregator {
 				for (String s : suggestions) {
 					// Δες αν το αντικείμενο είναι στη λίστα suggestions
 					if (o.getName().equals(s)) {
-						AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
-								o.getDescr());
+						AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt,
+								i, o.getDescr());
 						suggested = true; // Είναι, το τυπώσαμε
 						break;
 					}
