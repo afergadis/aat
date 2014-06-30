@@ -1,17 +1,20 @@
 package model;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.namespace.NamespaceContext;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.RDFNode;
 
 import controller.QueryProfiles;
 
@@ -20,29 +23,38 @@ import controller.QueryProfiles;
  * 
  */
 public class QueryProfilesOWL implements QueryProfiles {
-	List<String> profiles;
+	List<String> profiles = new ArrayList<>();
 
 	public QueryProfilesOWL() {
-		InputSource ns1xml = new InputSource("data/UserModelling.rdf");
-		NamespaceContext context = new NamespaceContextMap("owlnl",
-				"http://www.aueb.gr/users/ion/owlnl#", "rdf",
-				"http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-		XPathFactory factory = XPathFactory.newInstance();
-		XPath xpath = factory.newXPath();
-		xpath.setNamespaceContext(context);
-		XPathExpression expression;
+		OntModel model = ModelFactory
+				.createOntologyModel(OntModelSpec.OWL_DL_MEM);
 		try {
-			expression = xpath.compile("//owlnl:UserType/@rdf:ID");
-			NodeList list = (NodeList) expression.evaluate(ns1xml,
-					XPathConstants.NODESET);
-			profiles = new ArrayList<>();
-			for (int i = 0; i < list.getLength(); i++) {
-				profiles.add(toTitleCase(list.item(i).getNodeValue().toString()));
+			File file = new File("data/UserModelling.rdf");
+			FileReader reader = new FileReader(file);
+			model.read(reader, null);
+
+			String sql = ""
+					+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+					+ "PREFIX owlnl: <http://www.aueb.gr/users/ion/owlnl#>\n"
+					+ "SELECT ?user WHERE\n"
+					+ "{ ?user rdf:type owlnl:UserType; }\n";
+
+			Query query = QueryFactory.create(sql);
+			QueryExecution qe = QueryExecutionFactory.create(query, model);
+			ResultSet results = qe.execSelect();
+			List<String> vars = results.getResultVars();
+
+			while (results.hasNext()) {
+				QuerySolution qs = results.nextSolution();
+				for (int i = 0; i < vars.size(); i++) {
+					String var = vars.get(i).toString();
+					RDFNode node = qs.get(var);
+					profiles.add(toTitleCase(node.toString().split("#")[1]));
+				}
 			}
-		} catch (XPathExpressionException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/*
@@ -54,11 +66,11 @@ public class QueryProfilesOWL implements QueryProfiles {
 	public List<String> getProfiles() {
 		return profiles;
 	}
-	
+
 	private String toTitleCase(String s) {
 		char c[] = s.toCharArray();
 		c[0] = Character.toUpperCase(c[0]);
-		
+
 		return new String(c);
 	}
 }
