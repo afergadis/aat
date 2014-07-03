@@ -39,9 +39,9 @@ public class UserTourFile implements UserTour {
 			String line = br.readLine(); // Αυτό είναι το header. Δε μας ενδιαφέρει.
 			
 			while ((line = br.readLine()) != null) {
-				String[] data = line.split(",", 7);
+				String[] data = line.split(",", 5);
 				boolean start = Boolean.parseBoolean(data[0]);
-				TourStep TourStep = new TourStep(start, data[1], data[2], data[3], data[4], data[5], data[6]);
+				TourStep TourStep = new TourStep(start, data[1], data[2], data[3]);
 				results.add(TourStep);
 			}
 			

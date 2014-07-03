@@ -37,11 +37,12 @@ public class Aggregator {
 	private final static String BOLD = "\033[0;1m";
 	private final static String PLAIN = "\033[0;0m";
 	private final static String STRIKE = "\033[0;9m";
+	private final static String CLEAR = "\033[H\033[2J";
 
 	public static void main(String[] args) {
 		Logger.getRootLogger().setLevel(Level.OFF);
 		// Clear screen
-		AnsiConsole.out.print("\033[H\033[2J");
+		AnsiConsole.out.print(CLEAR);
 		System.out.flush();
 
 		String owlPath = System.getProperty("user.dir") + "/data/OwlTemp.owl";
@@ -90,7 +91,7 @@ public class Aggregator {
 			ut = new UserTourFile(up);
 			System.out.println("Start by viewing:");
 			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
-					.getDescr(), null);
+					.getName(), null);
 			if (choice == -1) {
 				exit("", 0);
 			}
@@ -105,7 +106,7 @@ public class Aggregator {
 			ut = new UserTourFile(up);
 			System.out.println("Start by viewing (suggestion in bold):");
 			choice = readExhibit(sc, "\t", ut.getObjects(), ut.getStart()
-					.getDescr(), null);
+					.getName(), null);
 			if (choice == -1) {
 				exit("", 0);
 			}
@@ -140,11 +141,11 @@ public class Aggregator {
 		}
 
 		// Loop ξενάγησης
+		boolean GenerateComparisons = false;
+		int depth = 1;
 		while (choice != -1) {
 			String objectURI = "http://localhost/OwlTemp.owl#"
 					+ exhibit.getName();
-			boolean GenerateComparisons = false;
-			int depth = 1;
 
 			// Εμφάνιση κειμένου
 			System.out.println(exhibit.getDescr() + "\n");
@@ -154,28 +155,22 @@ public class Aggregator {
 
 			// Εμφάνιση των επιλογών και ανάγνωση της επιλογής του χρήστη
 			choice = readExhibit(sc, "\t", ut.getObjects(),
-					exhibit.getSuggestions(), h.getHistory());
+					exhibit.getSuggestion(), h.getHistory());
 			if (choice == -1) {
 				exit("", 0);
 			}
 
 			// Καταχώρησε τις προτάσεις του προηγούμενου εκθέματος
-			List<String> suggestions = exhibit.getSuggestions();
+			String suggestion = exhibit.getSuggestion();
 
 			// Βρες το νέο έκθεμα που διάλεξε ο χρήστης
 			exhibit = ut.getExhibit(choice);
 
 			// Καταχώρηση της επιλογής στο log file
-			boolean suggested = false;
-			for (String s : suggestions) {
-				// Αν το όνομα του επιλεγμένου ήταν στις προτάσεις
-				if (exhibit.getName().equals(s)) {
-					h.addRecord(exhibit.getName(), 1);
-					suggested = true;
-					break;
-				}
-			}
-			if (!suggested) {
+			if (exhibit.getName().equals(suggestion)
+					&& !inHistory(suggestion, h.getHistory())) {
+				h.addRecord(exhibit.getName(), 1);
+			} else {
 				h.addRecord(exhibit.getName(), 0);
 			}
 
@@ -231,45 +226,27 @@ public class Aggregator {
 	}
 
 	private static int readExhibit(Scanner sc, String prompt,
-			List<TourStep> exhibits, String s1, String s2) {
-		int i = 1;
-		for (TourStep o : exhibits) {
-			if (o.getDescr().equals(s1) || o.getDescr().equals(s2))
-				AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
-						o.getDescr());
-			else
-				AnsiConsole.out.printf("%s%s%2d: %s\n", PLAIN, prompt, i,
-						o.getDescr());
-			i++;
-		}
-
-		return readChoice(sc, "Choose a Number (suggestions in bold)", 0, i - 1);
-	}
-
-	private static int readExhibit(Scanner sc, String prompt,
-			List<TourStep> exhibits, List<String> suggestions,
-			Set<String> history) {
+			List<TourStep> exhibits, String suggestion, Set<String> history) {
 		int i = 1;
 		boolean suggested = false; // Αν έχει εκτυπωθεί ως πρόταση
 		for (TourStep o : exhibits) {
-			for (String s : history) {
-				// Δες αν το αντικείμενο είναι στη λίστα ιστορικού
-				if (o.getName().equals(s)) {
-					AnsiConsole.out.printf("%s%s%2d: %s\n", STRIKE, prompt, i,
-							o.getDescr());
-					suggested = true; // Είναι, το τυπώσαμε
-					break;
-				}
-			}
-			if (!suggested) {
-				for (String s : suggestions) {
-					// Δες αν το αντικείμενο είναι στη λίστα suggestions
+			if (history != null) {
+				for (String s : history) {
+					// Δες αν το αντικείμενο είναι στη λίστα ιστορικού
 					if (o.getName().equals(s)) {
-						AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt,
+						AnsiConsole.out.printf("%s%s%2d: %s\n", STRIKE, prompt,
 								i, o.getDescr());
 						suggested = true; // Είναι, το τυπώσαμε
 						break;
 					}
+				}
+			}
+			if (!suggested) {
+				// Δες αν το αντικείμενο είναι πρόταση
+				if (o.getName().equals(suggestion)) {
+					AnsiConsole.out.printf("%s%s%2d: %s\n", BOLD, prompt, i,
+							o.getDescr());
+					suggested = true; // Είναι, το τυπώσαμε
 				}
 			}
 			if (!suggested) // Αν δεν έχει τυπωθεί, τύπωσέ το
@@ -280,7 +257,11 @@ public class Aggregator {
 		}
 
 		return readChoice(sc,
-				"Choose an Exhibit Number (suggestions with stars)", 0, i - 1);
+				"Choose an Exhibit Number (suggestions with bold)", 0, i - 1);
+	}
+
+	private static boolean inHistory(String suggestion, Set<String> history) {
+		return history.contains(suggestion);
 	}
 
 	private static void exit(String msg, int value) {
