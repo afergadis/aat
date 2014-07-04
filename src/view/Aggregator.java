@@ -16,7 +16,6 @@ import java.util.Scanner;
 import java.util.Set;
 
 import model.HistoryFile;
-import model.QueryProfilesOWL;
 import model.QueryProfilesXML;
 import model.TourStep;
 import model.UserTourFile;
@@ -55,11 +54,9 @@ public class Aggregator {
 				.get(System.getProperty("user.dir"), "/data");
 
 		String up; // User Profile
+		qp = new QueryProfilesXML();
 		if (OS.startsWith("Windows")) {
-			qp = new QueryProfilesXML();
 			STRIKE = "--";
-		} else {
-			qp = new QueryProfilesOWL();
 		}
 
 		List<String> profiles = qp.getProfiles();
