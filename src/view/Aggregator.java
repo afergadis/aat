@@ -8,6 +8,7 @@ import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
@@ -16,6 +17,7 @@ import java.util.Set;
 
 import model.HistoryFile;
 import model.QueryProfilesOWL;
+import model.QueryProfilesXML;
 import model.TourStep;
 import model.UserTourFile;
 
@@ -33,11 +35,12 @@ public class Aggregator {
 	static History h;
 	static TourStep ts;
 	static NLGEngine e;
+
 	// http://stackoverflow.com/questions/5062458/font-settings-for-strings-in-java
 	private final static String BOLD = "\033[0;1m";
 	private final static String PLAIN = "\033[0;0m";
-	private final static String STRIKE = "\033[0;9m";
 	private final static String CLEAR = "\033[H\033[2J";
+	private static String STRIKE = "\033[0;9m";
 
 	public static void main(String[] args) {
 		Logger.getRootLogger().setLevel(Level.OFF);
@@ -45,11 +48,20 @@ public class Aggregator {
 		AnsiConsole.out.print(CLEAR);
 		System.out.flush();
 
-		String owlPath = System.getProperty("user.dir") + "/data/OwlTemp.owl";
-		String NLResourcePath = System.getProperty("user.dir") + "/data";
+		String OS = System.getProperty("os.name");
+		Path owlPath = Paths.get(System.getProperty("user.dir"),
+				"/data/OwlTemp.owl");
+		Path NLResourcePath = Paths
+				.get(System.getProperty("user.dir"), "/data");
 
 		String up; // User Profile
-		qp = new QueryProfilesOWL();
+		if (OS.startsWith("Windows")) {
+			qp = new QueryProfilesXML();
+			STRIKE = "--";
+		} else {
+			qp = new QueryProfilesOWL();
+		}
+
 		List<String> profiles = qp.getProfiles();
 		Scanner sc = new Scanner(System.in);
 
@@ -75,8 +87,8 @@ public class Aggregator {
 		up = profiles.get(choice).toLowerCase();
 		String filename = "/data/" + up + "_intro.txt";
 		String legend = "Our suggestions are in " + BOLD + "bold" + PLAIN
-				+ " and viewed items are " + STRIKE + "striked out" + PLAIN
-				+ ".\n";
+				+ " and viewed items are " + STRIKE + "striked out" + STRIKE
+				+ PLAIN + ".\n";
 
 		switch (up) {
 		case "basic":
@@ -130,7 +142,7 @@ public class Aggregator {
 		String UT = "http://www.aueb.gr/users/ion/owlnl/UserModelling#"
 				+ up.toLowerCase();
 
-		startNLG(owlPath, NLResourcePath, userID, UT);
+		startNLG(owlPath.toString(), NLResourcePath.toString(), userID, UT);
 
 		// Καταχώρηση της 1ης επιλογής στο log
 		TourStep exhibit = ut.getExhibit(choice);

@@ -8,7 +8,7 @@ package model;
  */
 public class TourStep {
 	private final boolean start;
-	private final String entity;
+	private final String name;
 	private final String descr;
 	private final String suggestion;
 
@@ -27,7 +27,7 @@ public class TourStep {
 	 */
 	public TourStep(boolean start, String name, String descr, String next) {
 		this.start = start;
-		this.entity = name;
+		this.name = name;
 		this.descr = descr;
 		suggestion = next;
 	}
@@ -45,7 +45,7 @@ public class TourStep {
 	 * @return το όνομα του αντικειμένου
 	 */
 	public String getName() {
-		return entity;
+		return name;
 	}
 
 	public String getDescr() {
