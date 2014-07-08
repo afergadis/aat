@@ -536,8 +536,8 @@
   <OwlTemp.owl:Temple rdf:ID="theseion">
     <OwlTemp.owl:construction-date>
       <OwlTemp.owl:Time-period rdf:ID="BC-446-442">
-        <rdfs:label xml:lang="english">446-442 BC</rdfs:label>
-        <rdfs:label xml:lang="english">mid 5th century BC</rdfs:label>
+        <rdfs:label xml:lang="english">in 446-442 BC</rdfs:label>
+        <rdfs:label xml:lang="english">in the mid 5th century BC</rdfs:label>
       </OwlTemp.owl:Time-period>
     </OwlTemp.owl:construction-date>
     <OwlTemp.owl:is-located-in-side>
@@ -591,8 +591,8 @@
     <OwlTemp.owl:period-of-use rdf:resource="#hellenistic"/>
     <OwlTemp.owl:construction-date>
       <OwlTemp.owl:Time-period rdf:ID="BC-430-420">
-        <rdfs:label xml:lang="english">430-420 BC</rdfs:label>
-        <rdfs:label xml:lang="english">the late 5th century</rdfs:label>
+        <rdfs:label xml:lang="english">in 430-420 BC</rdfs:label>
+        <rdfs:label xml:lang="english">in the late 5th century</rdfs:label>
       </OwlTemp.owl:Time-period>
     </OwlTemp.owl:construction-date>
     <OwlTemp.owl:made-of rdf:resource="#pentelic-marble"/>
@@ -657,7 +657,7 @@
   <OwlTemp.owl:Region rdf:ID="Kerameikos"/>
   <OwlTemp.owl:City rdf:ID="Corinth"/>
   <OwlTemp.owl:Description rdf:ID="theseion-description">
-    <rdfs:label xml:lang="english">Theseion (=the Temple of Hephaestus), on the hill of Agoraios Kolonos (=Market Hill) is one of the most important monuments of the Pericleian Building Programme. The temple was richly decorated with sculptures; . It survived the raid of the Heruli and that of the Goths; it was converted to a Christian church of St George in the 7th cent., and continued to be used a place of Christian worship until 1833. Since then it was used as a museum, until 1950 when excavations were conducted in its interior</rdfs:label>
+    <rdfs:label xml:lang="english">Theseion (=the Temple of Hephaestus), on the hill of Agoraios Kolonos (=Market Hill) is one of the most important monuments of the Pericleian Building Programme. The temple was richly decorated with sculptures. It survived the raid of the Heruli and that of the Goths; it was converted to a Christian church of St George in the 7th cent., and continued to be used a place of Christian worship until 1833. Since then it was used as a museum, until 1950 when excavations were conducted in its interior</rdfs:label>
     <rdfs:label xml:lang="english">Theseion (=the Temple of Hephaestus), on the hill of Agoraios Kolonos (=Market Hill) is the best preserved example of a Doric order temple in Greece, and one of the most important monuments of the Pericleian Building Programme. The temple was richly adorned with sculptures; it comprised metopes at its east side and the east corners of the north and south sides, an Ionic frieze above the peristasis in the pronaos and pediments which survive in a poor condition. It survived the raid of the Heruli and that of the Goths; it was converted to a Christian church of St George in the 7th cent., and continued to be used a place of Christian worship until 1833. Since then it was used as a museum, until 1950 when excavations were conducted in its interior</rdfs:label>
   </OwlTemp.owl:Description>
   <OwlTemp.owl:Temple rdf:ID="temple-of-zeus-phratrios-and-athena-phratria">

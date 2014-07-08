@@ -1,8 +1,8 @@
 Start,ID,Title,Suggest
 true,stoa-of-zeus-eleutherios,Stoa of Zeus Eleutherios,stoa-of-attalus
-false,stoa-of-attalus,Stoa of Attalos,temple-of-zeus-phratrios-and-athena-phratria
-false,theseion,Theseion,stoa-of-attalus
-false,temple-of-zeus-phratrios-and-athena-phratria,Temple of Zeus Phratrios and Athena Phratria ,theseion
+false,stoa-of-attalus,Stoa of Attalos,theseion
+false,theseion,Theseion,temple-of-zeus-phratrios-and-athena-phratria
+false,temple-of-zeus-phratrios-and-athena-phratria,Temple of Zeus Phratrios and Athena Phratria ,
 false,temple-of-apollo-patroos,Temple of Apollo Patroos,
 false,southwest-fountain,South West Fountain ,
 false,south-stoa-II,South Stoa II,
